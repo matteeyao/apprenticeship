@@ -2,8 +2,6 @@
 
 ## Application Quick-start Steps
 
-<br />
-
 * To install gems, run `bundle install`
 
 * To run specs, enter these commands:
@@ -12,11 +10,7 @@
 
     * `bundle exec rspec spec/02_super_computer_player_spec.rb`
 
-<br />
-
 ## Test-Driven Development (TDD)
-
-<br />
 
 *Test-driven development* is a software development approach which dictates that tests, not application code, should be written first, and then application code should only be written to pass already written specs.
 
@@ -26,11 +20,7 @@ The process starts w/ designing and developing tests for every small functionali
 
 ![](assets/images/test-driven-development-outline.png)
 
-<br />
-
 ### Motivations for TDD
-
-<br />
 
 * Code written is guaranteed to be testable because you are writing the code specifically to pass a test
 
@@ -44,11 +34,7 @@ The process starts w/ designing and developing tests for every small functionali
 
 * Encourages a focus on a module's/class's public interface (i.e. on how the module will be used rather than on how it's implemented)
 
-<br />
-
 ### The Three Rules of TDD 
-
-<br />
 
 Robert C. Martin (“Uncle Bob”) three rules of Test-Driven Development are as outlined:
 
@@ -64,11 +50,7 @@ Rule number two says to proceed as incrementally as possible-after each line wri
 
 Rule number three says to write no more code than your tests specify. That's why rule number one says "to pass a *failing* unit test." If you write more code than needed-if you implement behavior for which no test exists-you'll be unable to follow rule #1, because you'll soon be writing tests that immediately pass.
 
-<br />
-
 ### Red, Green, Refactor
-
-<br />
 
 **Red**, **Green**, **Refactor** describes the proper TDD workflow.
 
@@ -80,11 +62,7 @@ Rule number three says to write no more code than your tests specify. That's why
 
 Generally, TDD developers keep their Red, Green, Refactor loop pretty tight. They'll write a few related tests, then implement the functionality, then refactor, then repeat. You keep the units small.
 
-<br />
-
 ### How to perform TDD Test
-
-<br />
 
 1. Add a test
 
@@ -98,19 +76,7 @@ Generally, TDD developers keep their Red, Green, Refactor loop pretty tight. The
 
 ![](assets/images/tdd-five-steps.png)
 
-<br />
-
 ## TDD in practice
 
-<br />
-
 While adhering to the TDD development cycle, let's begin creating a Tic-Tac-Toe application.
-
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
 
