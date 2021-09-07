@@ -78,5 +78,94 @@ Generally, TDD developers keep their Red, Green, Refactor loop pretty tight. The
 
 ## TDD in practice
 
-While adhering to the TDD development cycle, let's begin creating a Tic-Tac-Toe application.
+The following details the process of creating a Tic-Tac-Toe application with Ruby while adhering to the TDD development cycle.
 
+### Board
+
+Let's first define a class `Board`. For this class, we will try to satisfy the following conditions.
+
+A condition for the grid layout of the `Board`:
+
+* The grid should be of a `3 x 3` layout.
+
+In this TDD walk-through, we begin writing the test suite for the code that fulfills all the above requirements.
+
+```rb
+# spec/board_spec.rb
+
+describe Board do
+    let(:empty_board) do
+        Board.new
+    end
+
+    describe '#initialize' do
+        it 'sets up the instance variables' do
+            expect(empty_board.grid.length).to eq(3)
+            empty_board.grid.each { |row| expect(row.length).to eq(3)}
+            expect(empty_board.grid.flatten.length).to eq(9)
+        end
+    end
+end
+```
+
+We begin by instantiating a new board using the class `Board` that we will create to fulfill this test.
+
+The test first checks that the length of the board adds up to 3 rows, then that each row is of length 3, and that there are a total of 9 squares within the board's grid.
+
+When we run the test, the test fails as expected since there is no code written yet. The specs fail as follows:
+
+```zsh
+Failures:
+
+  1) Board#initialize sets up the instance variables
+     Failure/Error: expect(empty_board.grid.length).to eq(3)
+     NoMethodError:
+       undefined method `length' for nil:NilClass
+     # ./spec/board_spec.rb:11:in `block (3 levels) in <top (required)>'
+
+Finished in 0.00036 seconds (files took 0.088 seconds to load)
+1 example, 1 failure
+
+Failed examples:
+
+rspec ./spec/board_spec.rb:10 # Board#initialize sets up the instance variables
+```
+
+To run the test, we create class `Board`:
+
+```rb
+# lib/board.rb
+
+class Board
+    attr_reader :grid
+
+    def self.blank_grid
+        Array.new(3) { Array.new(3) }
+    end
+
+    def initialize(grid = self.class.blank_grid)
+        @grid = grid
+    end
+end
+```
+
+As a result adding some functionality to the `Board` class, the test case should now succeed, as seen in the following terminal output:
+
+```zsh
+Finished in 0.0009 seconds (files took 0.088 seconds to load)
+1 example, 0 failures
+```
+
+## Summary
+
+* TDD stands for Test-driven development
+
+* TDD meaning: It is a process of modifying the code in order to pass a test designed previously
+
+* Its emphasis is on production code rather than test case design
+
+* Test-driven development is a process of modifying the code in order to pass a test designed previously
+
+* TDD testing includes refactoring a code, i.e., changing/adding some amount of code to the existing code w/o affecting the behavior of the code.
+
+* TDD programming when used makes for clearer and more simple-to-understand code
