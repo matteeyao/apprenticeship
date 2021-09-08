@@ -94,40 +94,120 @@ describe Board do
     end
 
     describe '#winner' do
-        it 'should return undefined for an empty grid' do
+        it 'should return undefined for an empty board' do
             expect(@empty_board.winner).to be_nil
         end
 
-        it 'should return :x for a grid filled with x\'s' do
+        it 'should return :x for a board filled with x\'s' do
             expect(filled_board.winner).to eq(:x)
         end
 
-        it 'should return :o for a grid filled with o\'s in the middle row' do
+        it 'should return :o for a board filled with o\'s in the middle row' do
             for idx in (0...3) do
                 @empty_board[[1, idx]] = :o
             end
             expect(@empty_board.winner).to eq(:o)
         end
 
-        it 'should return :o for a grid filled with o\'s in the middle column' do
+        it 'should return :o for a board filled with o\'s in the middle column' do
             for idx in (0...3) do
                 @empty_board[[idx, 1]] = :o
             end
             expect(@empty_board.winner).to eq(:o)
         end
 
-        it 'should return :x for a grid filled with x\'s in the top-right to bottom-left diagonal' do
+        it 'should return :x for a board filled with x\'s in the top-right to bottom-left diagonal' do
             for idx in (0...3) do
                 @empty_board[[idx, idx]] = :x
             end
             expect(@empty_board.winner).to eq(:x)
         end
 
-        it 'should return :o for a grid filled with o\'s in the top-left to bottom-right diagonal' do
+        it 'should return :o for a board filled with o\'s in the top-left to bottom-right diagonal' do
             for idx in (0...3) do
                 @empty_board[[2 - idx, idx]] = :o
             end
             expect(@empty_board.winner).to eq(:o)
         end
+    end
+
+    describe '#isWon?' do
+        it 'should return false for an empty board' do
+            expect(@empty_board.isWon?).to be false
+        end
+
+        it 'should return true for an empty board' do
+            expect(filled_board.isWon?).to be true
+        end
+    end
+
+    describe '#isTied?' do
+        it 'should return false for an empty board' do
+            expect(@empty_board.isTied?).to be false
+        end
+
+        it 'should return false for a board filled with :x\'s' do
+            expect(filled_board.isTied?).to be false
+        end
+
+        it 'should return false for a partially filled board with no winners' do
+            @empty_board[[0, 0]] = :x
+            @empty_board[[0, 1]] = :o
+            @empty_board[[0, 2]] = :x
+            @empty_board[[1, 1]] = :o
+            @empty_board[[1, 2]] = :o
+            @empty_board[[2, 0]] = :o
+            @empty_board[[2, 1]] = :x
+            @empty_board[[2, 2]] = :x
+            expect(@empty_board.isTied?).to be false
+        end
+
+        it 'should return true for a filled board with no winners' do
+            @empty_board[[0, 0]] = :x
+            @empty_board[[0, 1]] = :o
+            @empty_board[[0, 2]] = :x
+            @empty_board[[1, 0]] = :x
+            @empty_board[[1, 1]] = :o
+            @empty_board[[1, 2]] = :o
+            @empty_board[[2, 0]] = :o
+            @empty_board[[2, 1]] = :x
+            @empty_board[[2, 2]] = :x
+            expect(@empty_board.isTied?).to be true
+        end 
+    end
+
+    describe '#isOver?' do
+        it 'should return false for an empty board' do
+            expect(@empty_board.isOver?).to be false
+        end
+
+        it 'should return true for a board filled with :x\s' do
+            expect(filled_board.isOver?).to be true
+        end
+
+        it 'should return false for a partially filled board with no winners' do
+            @empty_board[[0, 0]] = :x
+            @empty_board[[0, 1]] = :o
+            @empty_board[[0, 2]] = :x
+            @empty_board[[1, 1]] = :o
+            @empty_board[[1, 2]] = :o
+            @empty_board[[2, 0]] = :o
+            @empty_board[[2, 1]] = :x
+            @empty_board[[2, 2]] = :x
+            expect(@empty_board.isTied?).to be false
+        end
+
+        it 'should return true for a filled board with no winners' do
+            @empty_board[[0, 0]] = :x
+            @empty_board[[0, 1]] = :o
+            @empty_board[[0, 2]] = :x
+            @empty_board[[1, 0]] = :x
+            @empty_board[[1, 1]] = :o
+            @empty_board[[1, 2]] = :o
+            @empty_board[[2, 0]] = :o
+            @empty_board[[2, 1]] = :x
+            @empty_board[[2, 2]] = :x
+            expect(@empty_board.isTied?).to be true
+        end 
     end
 end

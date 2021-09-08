@@ -68,7 +68,7 @@ class Board
         return false if self.isWon?
 
         # no empty space?
-        @rows.all? { |row| row.none? { |el| el.nil? }}
+        @grid.all? { |row| row.none? { |el| el.nil? }}
     end
 
     def isOver?
