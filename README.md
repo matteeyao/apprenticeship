@@ -164,7 +164,123 @@ Finished in 0.0009 seconds (files took 0.088 seconds to load)
 1 example, 0 failures
 ```
 
-Adding
+Rinse and repeat through the Test-Driven development process for the rest of the required conditions for the board class. Here are some additional conditions for the class `Board`:
+
+* The board should have only have marks `[:x, :o]`
+
+* The board should have functionality to get a mark or undefined from a position as well as set that position to a mark
+
+* The board should have the functionality to check if a spot is taken or is empty
+
+* The board should have functionality to determine a winner, a draw, or neither
+
+For each of these conditions, we will create tests, ensure they fail, write code that addresses the test requirements until the tests pass, and refactor accordingly, ensuring all tests still pass.
+
+For example, to determine the winner of a board, either a column, row, or diagonal of the board are required to have matching marks.
+
+The test suite below is written as follows:
+
+```rb
+#  /spec/board_spec.rb
+
+define Board do
+    # ...
+    describe '#winner' do
+        it 'should return undefined for an empty board' do
+            expect(@empty_board.winner).to be_nil
+        end
+
+        it 'should return :x for a board filled with x\'s' do
+            expect(filled_board.winner).to eq(:x)
+        end
+
+        it 'should return :o for a board filled with o\'s in the middle row' do
+            for idx in (0...3) do
+                @empty_board[[1, idx]] = :o
+            end
+            expect(@empty_board.winner).to eq(:o)
+        end
+
+        it 'should return :o for a board filled with o\'s in the middle column' do
+            for idx in (0...3) do
+                @empty_board[[idx, 1]] = :o
+            end
+            expect(@empty_board.winner).to eq(:o)
+        end
+
+        it 'should return :x for a board filled with x\'s in the top-right to bottom-left diagonal' do
+            for idx in (0...3) do
+                @empty_board[[idx, idx]] = :x
+            end
+            expect(@empty_board.winner).to eq(:x)
+        end
+
+        it 'should return :o for a board filled with o\'s in the top-left to bottom-right diagonal' do
+            for idx in (0...3) do
+                @empty_board[[2 - idx, idx]] = :o
+            end
+            expect(@empty_board.winner).to eq(:o)
+        end
+    end
+    # ...
+end
+```
+
+All of the tests should fail, however, the first test passes since the `#winner` function does return undefined as the function has nothing written in it. For now, we will carry on to writing the code, as we require the `#winner` function to return undefined if there is no winner. After writing the following code below, the test suite should now pass.
+
+```rb
+# /lib/board
+
+class Board do
+    attr_reader :grid
+
+    def self.blank_grid
+        Array.new(3) { Array.new(3) }
+    end
+
+    def initialize(grid = self.class.blank_grid)
+        @grid = grid
+    end
+
+    # ...
+
+    def cols
+        cols = [[], [], []]
+        @grid.each do |row|
+            row.each_with_index do |mark, col_idx|
+                cols[col_idx] << mark
+            end
+        end
+        cols
+    end
+
+    def diagonals
+        down_diag = [[0, 0], [1, 1], [2, 2]]
+        up_diag = [[0, 2], [1, 1], [2, 0]]
+
+        [down_diag, up_diag].map do |diag|
+            # Note the `row, col` inside the block; this unpacks, or
+            # "destructures" the argument. Read more here:
+            # http://tony.pitluga.com/2011/08/08/destructuring-with-ruby.html
+            diag.map { |row, col| @grid[row][col] }
+        end
+    end
+
+    # ...
+
+    def winner
+        rows = grid
+        (rows + cols + diagonals).each do |triple|
+            return :x if triple == [:x, :x, :x]
+            return :o if triple == [:o, :o, :o]
+        end
+
+        nil
+    end
+end
+```
+
+The same processes will be repeated for the `Game` interface class and `Player` class.
 
 ## Summary
 
