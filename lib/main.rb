@@ -1,22 +1,16 @@
-require_relative 'board'
+require_relative 'Board'
+require_relative 'Game'
 
-test_board = Board.new
+test_game = Game.new("Player One", "Player Two")
 
-x = test_board[[0, 0]]
+test_game.board[[0, 0]] = :x
+test_game.board[[1, 1]] = :o
 
-def fill_board(board)
-    for i in (0...3)
-        for j in (0...3)
-            board[[i, j]] = :x
-            # puts("#{i}, #{j} = #{board[[i, j]]}")
-        end
-    end
-    board
-end
+# print test_game.board.grid
 
-new_test_board = fill_board(test_board)
-
-print new_test_board.winner
+test_game.show
 # print test_board.grid
 # puts new_test_board.grid.length
 # puts new_test_board.grid[0].length
+
+# puts :x

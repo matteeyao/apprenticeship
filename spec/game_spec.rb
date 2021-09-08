@@ -1,5 +1,5 @@
 require 'rspec'
-require 'game'
+require 'Game'
 
 describe Game do
     before(:each) do
@@ -14,5 +14,39 @@ describe Game do
         end
     end
 
-    
+    describe '#show' do
+        it 'prints an empty board with no marks' do
+            expect do
+                @game.show
+            end.to output("   |   |   \n-----------\n   |   |   \n-----------\n   |   |   \n")
+                .to_stdout
+        end
+
+        it 'prints a board with several marks played' do
+            @game.board[[0, 2]] = :x
+            @game.board[[1, 1]] = :o
+            @game.board[[2, 2]] = :x
+            @game.board[[1, 2]] = :o
+            expect do
+                @game.show
+            end.to output("   |   | x \n-----------\n   | o | o \n-----------\n   |   | x \n")
+                .to_stdout
+        end
+
+        it 'prints a board with all spots filled' do
+            @game.board[[0, 2]] = :x
+            @game.board[[1, 1]] = :o
+            @game.board[[2, 2]] = :x
+            @game.board[[1, 2]] = :o
+            @game.board[[1, 0]] = :x
+            @game.board[[0, 0]] = :o
+            @game.board[[2, 0]] = :x
+            @game.board[[2, 1]] = :o
+            @game.board[[0, 1]] = :x
+            expect do
+                @game.show
+            end.to output(" o | x | x \n-----------\n x | o | o \n-----------\n x | o | x \n")
+                .to_stdout
+        end
+    end
 end

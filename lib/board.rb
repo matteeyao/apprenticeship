@@ -57,7 +57,7 @@ class Board
 
     def self.isValid?(pos)
         rowIdx, colIdx = pos[0], pos[1]
-        return (0 <= rowIdx) && (rowIdx < 3) && (0 <= colIdx) && (colIdx < 3)
+        [rowIdx, colIdx].all? { |coord| (0..2).include?(coord) }
     end
 
     def isEmpty?(pos)

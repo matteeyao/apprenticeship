@@ -1,5 +1,5 @@
 require 'rspec'
-require 'board'
+require 'Board'
 
 describe Board do
     before(:each) do
