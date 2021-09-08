@@ -1,15 +1,18 @@
 require 'rspec'
+require 'Player'
 require 'Game'
 
 describe Game do
     before(:each) do
-        @game = Game.new("Player One", "Player Two")
+        @player_one = Player.new("Player One")
+        @player_two = Player.new("Player Two")
+        @game = Game.new(@player_one, @player_two)
     end
 
     describe '#initialize' do
         it 'sets up the instance variables' do
             expect(@game.board).not_to be_nil
-            expect(@game.players).to eq({ :x => "Player One", :o => "Player Two" })
+            expect(@game.players).to eq({ :x => @player_one, :o => @player_two })
             expect(@game.turn).to eq(:x)
         end
     end
@@ -47,6 +50,93 @@ describe Game do
                 @game.show
             end.to output(" o | x | x \n-----------\n x | o | o \n-----------\n x | o | x \n")
                 .to_stdout
+        end
+    end
+
+    describe '#place_mark' do
+        before do
+            @game.board[[1, 1]] = :x
+        end
+
+        context 'if the spot chosen is empty' do
+            it 'should return true when placing a mark on that spot' do
+                expect(@game.place_mark([1, 0], :x)).to be true
+                expect(@game.place_mark([1, 2], :x)).to be true
+            end
+        end
+
+        context 'if the spot chosen already has a mark' do
+            it 'should return false when placing a mark on that spot' do
+                expect(@game.place_mark([1, 1], :x)).to be false
+            end
+        end
+    end
+
+    describe '#play_turn' do
+        # subject { @player_one.get_pos }
+
+        # after { subject }
+
+        # context 'a pos has been given' do
+        #     before do
+        #         allow(@player_one).to receive(:get_pos) { '2,2' }
+        #     end
+
+        #     it 'breaks the loop' do
+        #         expect(@player_one).to receive(:get_pos).once
+        #     end
+        # end
+        # Google search term: rspec ignore loop
+        # RSpec test breaking loops https://gist.github.com/TimothyClayton/7c9fd2e3389ee07f13e07d92aff02b11
+
+        it 'switches to the next player after being invoked' do
+            expect(@game.players[@game.turn].name).to eq("Player One")
+            @game.swap_turns
+            expect(@game.players[@game.turn].name).to eq("Player Two")
+        end
+    end
+
+    describe 'print_results' do
+        before(:each) do
+            @player_one = Player.new("Player One")
+            @player_two = Player.new("Player Two")
+            @game = Game.new(@player_one, @player_two)
+        end
+
+        context 'if the game ends in a win' do
+            before do
+                for i in (0...3) do
+                    for j in (0...3) do
+                        @game.board[[i, j]] = :x
+                    end
+                end
+            end
+
+            it "should print 'Player One won the game!'" do
+                expect { @game.print_results }
+                    .to output("Player One won the game!\n")
+                    .to_stdout
+            end
+        end
+
+        context 'if the game ends in a draw' do
+            before do
+                @game.board[[0, 0]] = :x
+                @game.board[[0, 1]] = :x
+                @game.board[[0, 2]] = :o
+                @game.board[[1, 0]] = :o
+                @game.board[[1, 1]] = :o
+                @game.board[[1, 2]] = :x
+                @game.board[[2, 0]] = :x
+                @game.board[[2, 1]] = :o
+                @game.board[[2, 2]] = :x    
+            end
+
+            it "should print 'No one wins!'" do
+                expect { @game.print_results }
+                    .to output("No one wins!\n")
+                    .to_stdout
+            end
         end
     end
 end

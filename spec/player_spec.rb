@@ -18,7 +18,7 @@ describe Player do
         end
     end
 
-    def get_input
+    def get_pos
         $stdin.gets.chomp.split(",").map(&:to_i)
     end
 
@@ -32,20 +32,20 @@ describe Player do
         end
 
         it 'returns coordinates in an array from input' do
-            expect(get_input).to eq([2,2])
+            expect(get_pos).to eq([2,2])
         end
     end
 
     describe '#check_input' do
         context 'if the input is valid' do
             it 'should return the input' do
-                expect(@test_player.check_input([1,1])).to eq([1,1])
+                expect(@test_player.check_pos([1,1])).to eq([1,1])
             end
         end
 
         context 'if the input is invalid' do
             it 'should output Invalid coordinates!' do
-                expect { @test_player.check_input([0,3]) }
+                expect { @test_player.check_pos([0,3]) }
                     .to output("Invalid coordinates!\n")
                     .to_stdout
             end

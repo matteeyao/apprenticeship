@@ -5,15 +5,14 @@ class Player
         @name = name
     end
 
-    def get_input
+    def get_pos
         puts "#{@name}: please input your next spot as row,col (e.g. 0,0)"
-        row, col = gets.chomp.split(",").map(&:to_i)
-        [row, col]
+        return gets.chomp.split(",").map(&:to_i)
     end
 
-    def check_input(input) 
-        if Board.isValid?(input)
-            return input
+    def check_pos(pos) 
+        if Board.isValid?(pos)
+            return pos
         else
             puts "Invalid coordinates!"
         end
@@ -22,7 +21,7 @@ class Player
     def move(game, mark)
         game.show
         while true
-            check_input(get_input)
+            check_pos(get_pos)
         end
     end
 end

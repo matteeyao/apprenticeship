@@ -43,17 +43,17 @@ describe Board do
 
     describe '@isValid?' do
         it 'should return false when x or y is less than 0' do
-            expect(Board.isValid?([-1, 1])).to be_falsy
-            expect(Board.isValid?([1, -1])).to be_falsy
+            expect(Board.isValid?([-1, 1])).to be false
+            expect(Board.isValid?([1, -1])).to be false
         end
 
         it 'should return false when x or y is greater than 2' do
-            expect(Board.isValid?([3, 1])).to be_falsy
-            expect(Board.isValid?([1, 3])).to be_falsy
+            expect(Board.isValid?([3, 1])).to be false
+            expect(Board.isValid?([1, 3])).to be false
         end
 
         it 'should return true otherwise' do
-            expect(Board.isValid?([2, 2])).to be_truthy
+            expect(Board.isValid?([2, 2])).to be true
         end
     end
 
