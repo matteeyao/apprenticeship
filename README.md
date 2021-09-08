@@ -99,10 +99,18 @@ describe Board do
     end
 
     describe '#initialize' do
-        it 'sets up the instance variables' do
+        it 'sets up the instance variable grid' do
             expect(empty_board.grid.length).to eq(3)
             empty_board.grid.each { |row| expect(row.length).to eq(3)}
             expect(empty_board.grid.flatten.length).to eq(9)
+        end
+
+        it 'should start out empty' do
+            for row in empty_board.grid do
+                for col in row do                    
+                    expect(col).to be_nil;
+                end
+            end
         end
     end
 end
@@ -110,7 +118,7 @@ end
 
 We begin by instantiating a new board using the class `Board` that we will create to fulfill this test.
 
-The test first checks that the length of the board adds up to 3 rows, then that each row is of length 3, and that there are a total of 9 squares within the board's grid.
+The test first checks that the length of the board adds up to 3 rows, then that each row is of length 3, and that there are a total of 9 squares within the board's grid. Finally, our test will need to ensure that the board's grid starts off as `[[nil, nil, nil], [nil, nil, nil], [nil, nil, nil]]`.
 
 When we run the test, the test fails as expected since there is no code written yet. The specs fail as follows:
 
@@ -149,12 +157,14 @@ class Board
 end
 ```
 
-As a result adding some functionality to the `Board` class, the test case should now succeed, as seen in the following terminal output:
+As a result adding some functionality to the `Board` class, the test case now succeeds, as seen in the following output:
 
 ```zsh
 Finished in 0.0009 seconds (files took 0.088 seconds to load)
 1 example, 0 failures
 ```
+
+Adding
 
 ## Summary
 
