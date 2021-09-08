@@ -1,4 +1,4 @@
-# Creating a Tic-Tac-Toe application using the Test-Driven Development approach
+# Creating a Tic-Tac-Toe application with Test-Driven Development
 
 ## Application Quick-start Steps
 
