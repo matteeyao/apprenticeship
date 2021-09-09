@@ -12,7 +12,7 @@
 
     * `bundle exec rspec spec/game_spec.rb`
 
-* To play a game of Tic-Tac-Toe, run 
+* To play a game of Tic-Tac-Toe, run `ruby lib/Game.rb`
 
 ## Test-Driven Development (TDD)
 
