@@ -6,9 +6,13 @@
 
 * To run specs, enter these commands:
 
-    * `bundle exec rspec spec/01_tic_tac_toe_node_spec.rb`
+    * `bundle exec rspec spec/board_spec.rb`
 
-    * `bundle exec rspec spec/02_super_computer_player_spec.rb`
+    * `bundle exec rspec spec/player_spec.rb`
+
+    * `bundle exec rspec spec/game_spec.rb`
+
+* To play a game of Tic-Tac-Toe, run 
 
 ## Test-Driven Development (TDD)
 

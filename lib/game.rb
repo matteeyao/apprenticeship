@@ -64,3 +64,16 @@ class Game
         print_results
     end
 end
+
+if $PROGRAM_NAME == __FILE__
+    puts "Enter player one's name:"
+    player_one_name = gets.chomp
+    puts "Enter player two's name:"
+    player_two_name = gets.chomp
+    puts
+
+    player_one = Player.new(player_one_name)
+    player_two = Player.new(player_two_name)
+
+    Game.new(player_one, player_two).run
+end

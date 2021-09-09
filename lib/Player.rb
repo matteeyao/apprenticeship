@@ -5,9 +5,10 @@ class Player
         @name = name
     end
 
-    def get_pos
-        puts "#{@name}: please input your next spot as row,col (e.g. 0,0)"
-        return gets.chomp.split(",").map(&:to_i)
+    def get_pos(mark)
+        print "#{@name} (#{mark.capitalize()}): please input a position to place your mark (e.g. row,col) "
+        pos = gets.chomp.split(",").map(&:to_i)
+        return pos
     end
 
     def check_pos(pos) 
@@ -20,8 +21,13 @@ class Player
 
     def move(game, mark)
         game.show
+        puts
         while true
-            check_pos(get_pos)
+            pos = get_pos(mark)
+            puts
+            if check_pos(pos) != nil
+                return pos
+            end
         end
     end
 end
