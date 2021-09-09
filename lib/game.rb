@@ -48,12 +48,15 @@ class Game
     end
 
     def print_results
+        self.show
+        puts
         if self.board.isWon?
             winning_player = self.players[self.board.winner]
             puts "#{winning_player.name} won the game!"
         else
             puts "No one wins!"
         end
+        puts
     end
 
     def run
@@ -66,9 +69,9 @@ class Game
 end
 
 if $PROGRAM_NAME == __FILE__
-    puts "Enter player one's name:"
+    print "Enter player one's name: "
     player_one_name = gets.chomp
-    puts "Enter player two's name:"
+    print "Enter player two's name: "
     player_two_name = gets.chomp
     puts
 
