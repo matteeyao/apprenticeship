@@ -6,7 +6,7 @@ class Player
     end
 
     def get_pos(mark)
-        print "#{@name} (#{mark.capitalize()}): please input a position to place your mark (e.g. row,col) "
+        print "#{@name} (#{mark.capitalize()}): please enter a position (e.g. row,col or 0,0) "
         pos = gets.chomp.split(",").map(&:to_i)
         return pos
     end
