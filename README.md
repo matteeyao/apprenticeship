@@ -1,6 +1,6 @@
 # Creating a Tic-Tac-Toe application with Test-Driven Development
 
-## Application Quick-start Steps
+## Application Quick-start Commands
 
 * To install gems, run `bundle install`
 
