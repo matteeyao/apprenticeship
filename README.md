@@ -16,7 +16,7 @@
 
 ## Test-Driven Development (TDD)
 
-*Test-driven development* is a software development approach which dictates that tests, not application code, should be written first, and then application code should only be written to pass already written specs.
+*Test-driven development* is a software development approach which dictates that tests, not application code, should be written first, and that only then should application code be written to pass already written specs.
 
 The process starts w/ designing and developing tests for every small functionality of an application. TDD framework instructs developers to write new code only if an automated test has failed.
 
@@ -172,7 +172,7 @@ Rinse and repeat through the Test-Driven development process for the rest of the
 
 * The board should have only have marks `[:x, :o]`
 
-* The board should have functionality to get a mark or undefined from a position as well as set that position to a mark
+* The board should have functionality to get a mark or undefined from a position on the board and mark that position
 
 * The board should have the functionality to check if a spot is taken or is empty
 
@@ -230,7 +230,7 @@ define Board do
 end
 ```
 
-All of the tests should fail, however, the first test passes since the `#winner` function does return undefined as the function has nothing written in it. For now, we will carry on to writing the code, as we require the `#winner` function to return undefined if there is no winner. After writing the following code below, the test suite should now pass.
+All of the tests should fail, however, the first test passes since the `#winner` function does return `undefined` as the function has nothing written in it. For now, we will carry on to writing the code, as we require the `#winner` function to return undefined if there is no winner. After writing the following code below, the test suite should now pass.
 
 ```rb
 # /lib/board
