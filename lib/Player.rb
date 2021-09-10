@@ -21,7 +21,6 @@ class Player
 
     def move(game, mark)
         game.show
-        puts
         while true
             pos = get_pos(mark)
             puts

@@ -20,6 +20,7 @@ class Game
                 puts "-----------"
             end
         end
+        puts
     end
 
     def place_mark(pos, mark)
