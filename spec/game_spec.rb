@@ -53,25 +53,6 @@ describe Game do
         end
     end
 
-    describe '#place_mark' do
-        before do
-            @game.board[[1, 1]] = :x
-        end
-
-        context 'if the spot chosen is empty' do
-            it 'should return true when placing a mark on that spot' do
-                expect(@game.place_mark([1, 0], :x)).to be true
-                expect(@game.place_mark([1, 2], :x)).to be true
-            end
-        end
-
-        context 'if the spot chosen already has a mark' do
-            it 'should return false when placing a mark on that spot' do
-                expect(@game.place_mark([1, 1], :x)).to be false
-            end
-        end
-    end
-
     describe '#play_turn' do
         # subject { @player_one.get_pos }
 
@@ -88,10 +69,12 @@ describe Game do
         # end
         # Google search term: rspec ignore loop
         # RSpec test breaking loops https://gist.github.com/TimothyClayton/7c9fd2e3389ee07f13e07d92aff02b11
+    end
 
+    describe '#swap_turn' do
         it 'switches to the next player after being invoked' do
             expect(@game.players[@game.turn].name).to eq("Player One")
-            @game.play_turn
+            @game.swap_turn
             expect(@game.players[@game.turn].name).to eq("Player Two")
         end
     end

@@ -23,19 +23,13 @@ class Game
         puts
     end
 
-    def place_mark(pos, mark)
-        if self.board.isEmpty?(pos)
-            self.board[pos] = mark
-            true
-        else
-            false
-        end
-    end
-
     def play_turn
         current_player = self.players[self.turn]
         pos = current_player.move(self, self.turn)
-        place_mark(pos, self.turn)
+        self.board[pos] = self.turn
+    end
+
+    def swap_turn
         # swap next whose turn it will be next
         @turn = ((self.turn == :x) ? :o : :x)
     end
@@ -54,6 +48,7 @@ class Game
     def run
         until self.board.isOver?
             play_turn
+            swap_turn
         end
 
         print_results
