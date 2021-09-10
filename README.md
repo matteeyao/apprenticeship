@@ -22,7 +22,7 @@ The process starts w/ designing and developing tests for every small functionali
 
 **Define functionality and write the specs first, then implement.**
 
-![](assets/images/test-driven-development-outline.png)
+![](docs/images/test-driven-development-outline.png)
 
 ### Motivations for TDD
 
@@ -78,7 +78,7 @@ Generally, TDD developers keep their Red, Green, Refactor loop pretty tight. The
 
 5. Repeat
 
-![](assets/images/tdd-five-steps.png)
+![](docs/images/tdd-five-steps.png)
 
 ## TDD in practice
 
