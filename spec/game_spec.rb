@@ -21,7 +21,7 @@ describe Game do
         it 'prints an empty board with no marks' do
             expect do
                 @game.show
-            end.to output("   |   |   \n-----------\n   |   |   \n-----------\n   |   |   \n")
+            end.to output("   |   |   \n-----------\n   |   |   \n-----------\n   |   |   \n\n")
                 .to_stdout
         end
 
@@ -32,7 +32,7 @@ describe Game do
             @game.board[[1, 2]] = :o
             expect do
                 @game.show
-            end.to output("   |   | x \n-----------\n   | o | o \n-----------\n   |   | x \n")
+            end.to output("   |   | x \n-----------\n   | o | o \n-----------\n   |   | x \n\n")
                 .to_stdout
         end
 
@@ -48,7 +48,7 @@ describe Game do
             @game.board[[0, 1]] = :x
             expect do
                 @game.show
-            end.to output(" o | x | x \n-----------\n x | o | o \n-----------\n x | o | x \n")
+            end.to output(" o | x | x \n-----------\n x | o | o \n-----------\n x | o | x \n\n")
                 .to_stdout
         end
     end
@@ -91,7 +91,7 @@ describe Game do
 
         it 'switches to the next player after being invoked' do
             expect(@game.players[@game.turn].name).to eq("Player One")
-            @game.swap_turns
+            @game.play_turn
             expect(@game.players[@game.turn].name).to eq("Player Two")
         end
     end
@@ -114,7 +114,7 @@ describe Game do
 
             it "should print 'Player One won the game!'" do
                 expect { @game.print_results }
-                    .to output("Player One won the game!\n")
+                    .to output(" x | x | x \n-----------\n x | x | x \n-----------\n x | x | x \n\nPlayer One won the game!\n\n")
                     .to_stdout
             end
         end
@@ -134,7 +134,7 @@ describe Game do
 
             it "should print 'No one wins!'" do
                 expect { @game.print_results }
-                    .to output("No one wins!\n")
+                    .to output(" x | x | o \n-----------\n o | o | x \n-----------\n x | o | x \n\nNo one wins!\n\n")
                     .to_stdout
             end
         end

@@ -11,11 +11,13 @@ class Player
         return pos
     end
 
-    def check_pos(pos) 
-        if Board.isValid?(pos)
+    def check_pos(game, pos) 
+        if Board.isValid?(pos) && game.board.isEmpty?(pos)
             return pos
-        else
+        elsif !Board.isValid?(pos)
             puts "Invalid coordinates!"
+        elsif !game.board.isEmpty?(pos)
+            puts "Position is already taken!"
         end
     end
 
@@ -24,7 +26,7 @@ class Player
         while true
             pos = get_pos(mark)
             puts
-            if check_pos(pos) != nil
+            if check_pos(game, pos) != nil
                 return pos
             end
         end

@@ -33,24 +33,15 @@ class Game
     end
 
     def play_turn
-        loop do
-            current_player = self.players[self.turn]
-            pos = current_player.move(self, self.turn)
-
-            break if place_mark(pos, self.turn)
-        end
-
-        swap_turns
-    end
-
-    def swap_turns
+        current_player = self.players[self.turn]
+        pos = current_player.move(self, self.turn)
+        place_mark(pos, self.turn)
         # swap next whose turn it will be next
         @turn = ((self.turn == :x) ? :o : :x)
     end
 
     def print_results
         self.show
-        puts
         if self.board.isWon?
             winning_player = self.players[self.board.winner]
             puts "#{winning_player.name} won the game!"
