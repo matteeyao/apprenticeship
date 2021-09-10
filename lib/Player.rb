@@ -19,6 +19,7 @@ class Player
         elsif !game.board.isEmpty?(pos)
             puts "Position is already taken!"
         end
+        puts
     end
 
     def move(game, mark)

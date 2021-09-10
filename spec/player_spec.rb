@@ -46,7 +46,15 @@ describe Player do
         context 'if the input is invalid' do
             it 'should output Invalid coordinates!' do
                 expect { @test_player.check_pos(@test_game,[0,3]) }
-                    .to output("Invalid coordinates!\n")
+                    .to output("Invalid coordinates!\n\n")
+                    .to_stdout
+            end
+        end
+
+        context 'if the inputed pos is alraedy take' do
+            it 'should output Position is already taken!' do
+                expect { @test_player.check_pos(@test_game,[0,3]) }
+                    .to output("Invalid coordinates!\n\n")
                     .to_stdout
             end
         end
