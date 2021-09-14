@@ -42,7 +42,7 @@ class HumanPlayer < Player
             if is_valid_input?(input) && is_vacant_pos?(game, input)
                 return convert_input_to_pos(input)
             elsif !is_valid_input?(input)
-                puts "Invalid input position!\n\n"
+                puts "Invalid input!\n\n"
             elsif !is_vacant_pos?(game, input)
                 puts "Position is already taken!\n\n"
             end

@@ -124,7 +124,7 @@ describe HumanPlayer do
         # context 'if the input is invalid' do
         #     it 'should print Invalid input position!' do
         #         expect { @test_player_one.fetch_pos(@test_game) }
-        #             .to output("Invalid input position!\n\n")
+        #             .to output("Invalid input!\n\n")
         #             .to_stdout
         #     end
         # end
