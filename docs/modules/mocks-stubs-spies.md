@@ -160,17 +160,17 @@ The record/replay metaphor has an advantage over the constraints of jMock in tha
 
 In the two styles of testing shown above, the first case uses a real warehouse object and the second case uses a mock warehouse, which of course isn't a real warehouse object. Using mocks is one way to not use a real warehouse in the test, but there are other forms of unreal objects used in testing like this.
 
-* **`Test Double`**: generic term for any kind of pretend object used in place of a real object for testing purposes.
+* **`Test Double`**: generic term for any case where you replace a production object for testing purposes.
 
-    * **`Dummy`**: objects are passed around but never actually used. Usually they are just used to fill parameter lists.
+  * **`Dummy`**: objects are passed around but never actually used. Usually they are just used to fill parameter lists.
 
-    * **`Fake`**: objects actually have working implementations, but usually take some shortcut which makes them not suitable for production-an in memory database for instance
+  * **`Fake`**: objects actually have working implementations, but usually take some shortcut which makes them not suitable for production (an in memory database for instance)
 
-    * **`Stubs`**: provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test
+  * **`Stubs`**: provide canned answers to calls made during the test, usually not responding at all to anything outside what's programmed in for the test
 
-    * **`Spies`**: are stubs that also record some information based on how they were called. One form of this might be an email service that records how many messages it was sent.
+  * **`Spies`**: are stubs that also record some information based on how they were called. One form of this might be an email service that records how many messages it was sent.
 
-    * **`Mocks`**: objects pre-programmed w/ expectations which form a specification of the calls they are expected to receive
+  * **`Mocks`**: objects pre-programmed w/ expectations which form a specification of the calls they are expected to receive
 
 Of these kinds of doubles, only mocks insist upon behavior verification. The other doubles can, and usually do, use state verification. Mocks actually do behave like other doubles during the exercise phase, as they need to make the SUT believe it's talking w/ its real collaborators-but mocks differ in the setup and the verification phases.
 
@@ -242,34 +242,34 @@ Mock objects always use behavior verification, a stub can go either way. Meszaro
 
 ```rb
 class SomeClient
-    def request
-        body = some_lib.request
-        JSON.parse body
-    end
+  def request
+    body = some_lib.request
+    JSON.parse body
+  end
 
-    private
+  private
 
-    def some_lib
-        @some_lib || SomeLib.new
-    end
+  def some_lib
+    @some_lib || SomeLib.new
+  end
 end
 ```
 
 ```rb
 describe 'SomeClient#request'
-    before do
-        allow(client).to receive(:some_lib).with(no_args).and_return(some_lib)
-        allow(some_lib).to receive(:request).with(no_args).and_return(expected_boby)
-    end
+  before do
+    allow(client).to receive(:some_lib).with(no_args).and_return(some_lib)
+    allow(some_lib).to receive(:request).with(no_args).and_return(expected_boby)
+  end
 
-    let(:client) { SomeClient.new }
-    let(:some_lib) { instance_double(SomeLib) }
-    let(:expected_body) { ... }
-    let(:expected_json) { JSON.parse expected_body }
+  let(:client) { SomeClient.new }
+  let(:some_lib) { instance_double(SomeLib) }
+  let(:expected_body) { ... }
+  let(:expected_json) { JSON.parse expected_body }
 
-    subject { client.request }
+  subject { client.request }
 
-    it { is_expected.to eq expected_json }
+  it { is_expected.to eq expected_json }
 end
 ```
 
@@ -277,19 +277,19 @@ end
 
 ```rb
 describe `SomeClient#request`
-    before { allow(client).to receive(:some_lib).with(no_args).and_return(some_lib) }
+  before { allow(client).to receive(:some_lib).with(no_args).and_return(some_lib) }
 
-    let(:client) { SomeClient.new }
-    let(:some_lib) { instance_double(SomeLib) }
-    let(:expected_body) { ... }
-    let(:expected_json) { JSON.parse expected_body }
+  let(:client) { SomeClient.new }
+  let(:some_lib) { instance_double(SomeLib) }
+  let(:expected_body) { ... }
+  let(:expected_json) { JSON.parse expected_body }
 
-    subject { client.request }
+  subject { client.request }
 
-    it do
-        expect(some_lib).to receive(:request).with(no_args).and_return(expected_body).once # Ensure it's really called expectedly
-        is_expected.to eq expected_json
-    end
+  it do
+    expect(some_lib).to receive(:request).with(no_args).and_return(expected_body).once # Ensure it's really called expectedly
+    is_expected.to eq expected_json
+  end
 ```
 
 If `SomeLib#request` is called unexpectedly (wrong args, called many times, etc.), the test will fail.
@@ -304,19 +304,19 @@ W/ spies:
 
 ```rb
 describe 'SomeClient#request'
-    before { allow(client).to receive(:some_lib).with(no_args).and_return(some_lib) }
+  before { allow(client).to receive(:some_lib).with(no_args).and_return(some_lib) }
 
-    let(:client) { SomeClient.new }
-    let(:some_lib) { spy(SomeLib) } # It's OK to use 'instance_double' instead
-    let(:expected_body) { ... }
-    let(:expected_json) { JSON.parse expected_body }
+  let(:client) { SomeClient.new }
+  let(:some_lib) { spy(SomeLib) } # It's OK to use 'instance_double' instead
+  let(:expected_body) { ... }
+  let(:expected_json) { JSON.parse expected_body }
 
-    subject { client.request }
+  subject { client.request }
 
-    it do
-        is_expected.to eq expected_json
-        expect(some_lib).to have_received(:request).with(no_args).and_return(expected_boby).once
-    end
+  it do
+    is_expected.to eq expected_json
+    expect(some_lib).to have_received(:request).with(no_args).and_return(expected_boby).once
+  end
 end
 ```
 

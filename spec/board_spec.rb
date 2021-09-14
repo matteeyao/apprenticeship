@@ -18,6 +18,13 @@ describe Board do
         filled_board
     end
 
+    describe '@marks' do
+        it 'should have two different marks' do
+            expect(Board.marks.length).to eq(2)
+            expect(Board.marks[0]).not_to eq(Board.marks[1])
+        end
+    end
+
     describe '#initialize' do
         it 'sets up the instance variable grid' do
             expect(@empty_board.grid.length).to eq(3)
@@ -31,13 +38,6 @@ describe Board do
                     expect(col).to be_nil
                 end
             end
-        end
-    end
-
-    describe '@marks' do
-        it 'should have two different marks' do
-            expect(Board.marks.length).to eq(2)
-            expect(Board.marks[0]).not_to eq(Board.marks[1])
         end
     end
 

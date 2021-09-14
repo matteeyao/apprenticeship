@@ -1,18 +1,18 @@
 class Board
-    attr_reader :grid
+    @@marks = [:x, :o]
 
-    def self.blank_grid
-        Array.new(3) { Array.new(3) }
+    def self.marks
+        @@marks
     end
+
+    attr_reader :grid
 
     def initialize(grid = self.class.blank_grid)
         @grid = grid
     end
 
-    @@marks = [:x, :o]
-
-    def self.marks
-        @@marks
+    def self.blank_grid
+        Array.new(3) { Array.new(3) }
     end
 
     def [](pos)
