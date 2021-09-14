@@ -3,12 +3,11 @@ require 'Player'
 
 describe Player do
     before(:each) do
-        @test_player = Player.new("Todd", "\u{274E}")
+        @test_player = Player.new("\u{274E}")
     end
 
     describe '#initialize' do
-        it 'sets up the instance variable name' do
-            expect(@test_player.name).to eq("Todd")
+        it 'sets up the instance variable mark' do
             expect(@test_player.mark).to eq("\u{274E}")
         end
     end

@@ -15,15 +15,15 @@ class Game
 
     def show
         self.board.grid.each_with_index do |row, idx|
-            puts " " + row.map { |el| el.nil? ? " " : players[el].mark }.join(" | ") + " "
-            puts "-----------" if (idx != 2)
+            puts row.map { |el| el.nil? ? "  " : players[el].mark }.join(" | ")
+            puts "------------" if (idx != 2)
         end
         puts
     end
 
     def play_turn
         current_player = self.players[self.turn]
-        pos = current_player.move(self, self.turn)
+        pos = current_player.move(self)
         self.board[pos] = self.turn
     end
 
@@ -34,9 +34,9 @@ class Game
 
     def print_results
         self.show
-        if self.board.isWon?
+        if self.board.is_won?
             winning_player = self.players[self.board.winner]
-            puts "#{winning_player.name} won the game!"
+            puts "#{winning_player.mark} won the game!"
         else
             puts "No one wins!"
         end
@@ -44,7 +44,7 @@ class Game
     end
 
     def run
-        until self.board.isOver?
+        until self.board.is_over?
             play_turn
             puts
             swap_turn

@@ -1,6 +1,7 @@
-require_relative 'Player'
 require_relative 'EasyPlayer'
 require_relative 'Game'
+require_relative 'HumanPlayer'
+require_relative 'Player'
 
 class Main
     def prompt
@@ -41,28 +42,25 @@ class Main
 
     # TODO: Add unit test/spec for method
     def initialize_and_start_custom_game
-        print "Enter player one's name: "
-        player_one_name = gets.chomp == "" ? "Player One" : gets.chomp
         print "Enter player one's mark (Hit enter to default to \u{274C}): "
-        player_one_mark = gets.chomp == "" ? "\u{274C}" : gets.chomp
-        print "Enter player two's name: "
-        player_two_name = gets.chomp == "" ? "Player Two" : gets.chomp
+        player_one_mark = gets.chomp 
+        player_one_mark = player_one_mark == "" ? "\u{274C}" : player_one_mark
         print "Enter player two's mark (Hit enter to default to \u{2B55}): "
-        player_two_mark = gets.chomp == "" ? "\u{2B55}" : gets.chomp
+        player_two_mark = gets.chomp 
+        player_two_mark = player_two_mark == "" ? "\u{2B55}" : player_two_mark
         puts
-        player_one = Player.new(player_one_name, player_one_mark)
-        player_two = Player.new(player_two_name, player_two_mark)
+        player_one = HumanPlayer.new(player_one_mark)
+        player_two = HumanPlayer.new(player_two_mark)
         Game.new(player_one, player_two).run
     end
 
     # TODO: Add unit test/spec for method
     def initialize_and_start_easy_game
-        print "Enter your name: "
-        player_one_name = gets.chomp
         print "Enter your mark (Hit enter to default to \u{274C}): "
-        player_one_mark = gets.chomp == "" ? "\u{274C}" : gets.chomp
+        human_player_mark = gets.chomp
+        human_player_mark = human_player_mark == "" ? "\u{274C}" : human_player_mark
         puts
-        human_player = Player.new(player_one_name, player_one_mark)
+        human_player = Player.new(human_player_mark)
         comp_player = EasyPlayer.new
         Game.new(human_player, comp_player).run
     end

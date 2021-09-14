@@ -12,12 +12,12 @@ class HumanPlayer < Player
         @@position_dictionary
     end
 
-    def initialize(name, mark)
-        super(name, mark)
+    def initialize(mark)
+        super(mark)
     end
 
     def fetch_input
-        print "#{mark} #{name}, enter a position 1-9: "
+        print "#{mark} enter a position 1-9: "
         input = gets.chomp
         return input
     end
@@ -30,27 +30,28 @@ class HumanPlayer < Player
         self.class.position_dictionary.keys.include?(input)
     end
 
-    # TODO: Add unit/integration test/spec for method
-    def verify_and_convert_input_to_pos(game, input)
+    def is_vacant_pos?(game, input)
         pos = convert_input_to_pos(input)
-        if is_valid_input?(input) && game.board.isEmpty?(pos)
-            return pos
-        elsif !is_valid_input?(input)
-            puts "Invalid input position!\n\n"
-        elsif !game.board.isEmpty?(pos)
-            puts "Position is already taken!"
+        game.board.is_empty?(pos)
+    end
+
+    # TODO: Add unit/integration test/spec for method
+    def fetch_pos(game)
+        loop do
+            input = fetch_input
+            if is_valid_input?(input) && is_vacant_pos?(game, input)
+                return convert_input_to_pos(input)
+            elsif !is_valid_input?(input)
+                puts "Invalid input position!\n\n"
+            elsif !is_vacant_pos?(game, input)
+                puts "Position is already taken!\n\n"
+            end
         end
     end
 
     # TODO: Add unit/integration test/spec for method
-    def move(game, mark)
+    def move(game)
         game.show
-        loop do
-            user_input = fetch_input
-            pos = verify_and_convert_input_to_pos(user_input)
-            if pos != nil
-                return pos
-            end
-        end
+        fetch_pos(game)
     end
 end
