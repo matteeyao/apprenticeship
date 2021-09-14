@@ -12,12 +12,6 @@ describe Game do
         @game = Game.new(@player_one, @player_two)
     end
 
-    describe '@position_dictionary' do
-        it 'should have nine different position key-value pairs' do
-            expect(Game.position_dictionary.length()).to eq(9)
-        end
-    end
-
     describe '#initialize' do
         it 'sets up the instance variables' do
             expect(@game.board).not_to be_nil
@@ -127,49 +121,6 @@ describe Game do
     #         it "should print 'No one wins!'" do
     #             expect { @game.print_results }
     #                 .to output(" x | x | o \n-----------\n o | o | x \n-----------\n x | o | x \n\nNo one wins!\n\n")
-    #                 .to_stdout
-    #         end
-    #     end
-    # end
-
-
-    # def get_pos
-    #     $stdin.gets.chomp.split(",").map(&:to_i)
-    # end
-
-    # describe '#get_input' do
-    #     before do
-    #         $stdin = StringIO.new("2,2")
-    #     end
-
-    #     after do
-    #         $stdin = STDIN
-    #     end
-
-    #     it 'returns coordinates in an array from input' do
-    #         expect(get_pos).to eq([2,2])
-    #     end
-    # end
-
-    # describe '#check_input' do
-    #     context 'if the input is valid' do
-    #         it 'should return the input' do
-    #             expect(@test_player.check_pos(@test_game,[1,1])).to eq([1,1])
-    #         end
-    #     end
-
-    #     context 'if the input is invalid' do
-    #         it 'should output Invalid coordinates!' do
-    #             expect { @test_player.check_pos(@test_game,[0,3]) }
-    #                 .to output("Invalid coordinates!\n\n")
-    #                 .to_stdout
-    #         end
-    #     end
-
-    #     context 'if the inputed pos is alraedy take' do
-    #         it 'should output Position is already taken!' do
-    #             expect { @test_player.check_pos(@test_game,[0,3]) }
-    #                 .to output("Invalid coordinates!\n\n")
     #                 .to_stdout
     #         end
     #     end
