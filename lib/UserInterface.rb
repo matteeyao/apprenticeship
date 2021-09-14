@@ -1,9 +1,8 @@
 require_relative 'EasyPlayer'
 require_relative 'Game'
 require_relative 'HumanPlayer'
-require_relative 'Player'
 
-class Main
+class UserInterface
     def prompt
         puts "Welcome to Tic-Tac-Toe!"
         puts "(1) Play against a friend"
@@ -60,7 +59,7 @@ class Main
         human_player_mark = gets.chomp
         human_player_mark = human_player_mark == "" ? "\u{274C}" : human_player_mark
         puts
-        human_player = Player.new(human_player_mark)
+        human_player = HumanPlayer.new(human_player_mark)
         comp_player = EasyPlayer.new
         Game.new(human_player, comp_player).run
     end
@@ -80,7 +79,7 @@ end
 
 # TODO: Add integration test/spec for script
 if $PROGRAM_NAME == __FILE__
-    text_interface = Main.new
+    text_interface = UserInterface.new
     text_interface.prompt
     num = text_interface.fetch_and_verify_input
     text_interface.launch(num)

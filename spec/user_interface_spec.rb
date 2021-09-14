@@ -1,9 +1,9 @@
 require 'rspec'
-require 'Main'
+require 'UserInterface'
 
-describe Main do
+describe UserInterface do
     before(:each) do
-        @text_interface = Main.new
+        @text_interface = UserInterface.new
     end
 
     describe '#prompt' do
