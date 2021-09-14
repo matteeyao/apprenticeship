@@ -15,7 +15,7 @@ class Main
         print "Choose one of the above options: "
         loop do            
             input = gets.to_i
-            if is_valid_input(input)
+            if is_valid_input?(input)
                 puts
                 return input
             end
@@ -23,7 +23,7 @@ class Main
         end
     end
 
-    def is_valid_input(input)
+    def is_valid_input?(input)
         return (1..3).to_a.include?(input)
     end
 
@@ -42,11 +42,11 @@ class Main
     # TODO: Add unit test/spec for method
     def initialize_and_start_custom_game
         print "Enter player one's name: "
-        player_one_name = gets.chomp
+        player_one_name = gets.chomp == "" ? "Player One" : gets.chomp
         print "Enter player one's mark (Hit enter to default to \u{274C}): "
         player_one_mark = gets.chomp == "" ? "\u{274C}" : gets.chomp
         print "Enter player two's name: "
-        player_two_name = gets.chomp
+        player_two_name = gets.chomp == "" ? "Player Two" : gets.chomp
         print "Enter player two's mark (Hit enter to default to \u{2B55}): "
         player_two_mark = gets.chomp == "" ? "\u{2B55}" : gets.chomp
         puts

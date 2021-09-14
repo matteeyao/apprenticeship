@@ -16,14 +16,14 @@ class Board
     end
 
     def [](pos)
-        raise "invalid position was entered" unless self.class.isValid?(pos)
+        raise "invalid position was entered" unless self.class.is_valid?(pos)
         rowIdx, colIdx = pos[0], pos[1]
         @grid[rowIdx][colIdx]
     end
 
     def []=(pos, mark)
-        raise "invalid position was entered" unless self.class.isValid?(pos)
-        raise "mark already placed there" unless isEmpty?(pos)
+        raise "invalid position was entered" unless self.class.is_valid?(pos)
+        raise "mark already placed there" unless is_empty?(pos)
         rowIdx, colIdx = pos[0], pos[1]
         @grid[rowIdx][colIdx] = mark
     end
@@ -55,25 +55,25 @@ class Board
         self.class.new(duped_rows)
     end
 
-    def self.isValid?(pos)
+    def self.is_valid?(pos)
         rowIdx, colIdx = pos[0], pos[1]
         [rowIdx, colIdx].all? { |coord| (0..2).include?(coord) }
     end
 
-    def isEmpty?(pos)
+    def is_empty?(pos)
         self[pos].nil?
     end
 
-    def isTied?
-        return false if self.isWon?
+    def is_tied?
+        return false if self.is_won?
 
         # no empty space?
         @grid.all? { |row| row.none? { |el| el.nil? }}
     end
 
-    def isOver?
+    def is_over?
         # don't use Ruby's `or` operator; always prefer `||`
-        self.isWon? || self.isTied?
+        self.is_won? || self.is_tied?
     end
 
     def winner
@@ -86,7 +86,7 @@ class Board
         nil
     end
 
-    def isWon?
+    def is_won?
         !winner.nil?
     end
 end

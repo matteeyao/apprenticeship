@@ -12,6 +12,12 @@ describe Game do
         @game = Game.new(@player_one, @player_two)
     end
 
+    describe '@position_dictionary' do
+        it 'should have nine different position key-value pairs' do
+            expect(Game.position_dictionary.length()).to eq(9)
+        end
+    end
+
     describe '#initialize' do
         it 'sets up the instance variables' do
             expect(@game.board).not_to be_nil

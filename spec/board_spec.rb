@@ -41,23 +41,23 @@ describe Board do
         end
     end
 
-    describe '@isValid?' do
+    describe '@is_valid?' do
         it 'should return false when x or y is less than 0' do
-            expect(Board.isValid?([-1, 1])).to be false
-            expect(Board.isValid?([1, -1])).to be false
+            expect(Board.is_valid?([-1, 1])).to be false
+            expect(Board.is_valid?([1, -1])).to be false
         end
 
         it 'should return false when x or y is greater than 2' do
-            expect(Board.isValid?([3, 1])).to be false
-            expect(Board.isValid?([1, 3])).to be false
+            expect(Board.is_valid?([3, 1])).to be false
+            expect(Board.is_valid?([1, 3])).to be false
         end
 
         it 'should return true otherwise' do
-            expect(Board.isValid?([2, 2])).to be true
+            expect(Board.is_valid?([2, 2])).to be true
         end
     end
 
-    describe '#isEmpty?' do
+    describe '#is_empty?' do
         it 'should return a mark for an occupied position' do
             expect(Board.marks.include?(filled_board[[0, 0]])).to be_truthy()
         end
@@ -73,7 +73,7 @@ describe Board do
         end
     end
 
-    describe '#placeMark' do
+    describe '#place_mark' do
         it 'should throw an error for a non-empty position' do
             for rowIdx in (0...@empty_board.grid.length)
                 for colIdx in (0...@empty_board.grid[rowIdx].length)
@@ -131,23 +131,23 @@ describe Board do
         end
     end
 
-    describe '#isWon?' do
+    describe '#is_won?' do
         it 'should return false for an empty board' do
-            expect(@empty_board.isWon?).to be false
+            expect(@empty_board.is_won?).to be false
         end
 
         it 'should return true for an empty board' do
-            expect(filled_board.isWon?).to be true
+            expect(filled_board.is_won?).to be true
         end
     end
 
-    describe '#isTied?' do
+    describe '#is_tied?' do
         it 'should return false for an empty board' do
-            expect(@empty_board.isTied?).to be false
+            expect(@empty_board.is_tied?).to be false
         end
 
         it 'should return false for a board filled with :x\'s' do
-            expect(filled_board.isTied?).to be false
+            expect(filled_board.is_tied?).to be false
         end
 
         it 'should return false for a partially filled board with no winners' do
@@ -159,7 +159,7 @@ describe Board do
             @empty_board[[2, 0]] = :o
             @empty_board[[2, 1]] = :x
             @empty_board[[2, 2]] = :x
-            expect(@empty_board.isTied?).to be false
+            expect(@empty_board.is_tied?).to be false
         end
 
         it 'should return true for a filled board with no winners' do
@@ -172,17 +172,17 @@ describe Board do
             @empty_board[[2, 0]] = :o
             @empty_board[[2, 1]] = :x
             @empty_board[[2, 2]] = :x
-            expect(@empty_board.isTied?).to be true
+            expect(@empty_board.is_tied?).to be true
         end 
     end
 
-    describe '#isOver?' do
+    describe '#is_over?' do
         it 'should return false for an empty board' do
-            expect(@empty_board.isOver?).to be false
+            expect(@empty_board.is_over?).to be false
         end
 
         it 'should return true for a board filled with :x\s' do
-            expect(filled_board.isOver?).to be true
+            expect(filled_board.is_over?).to be true
         end
 
         it 'should return false for a partially filled board with no winners' do
@@ -194,7 +194,7 @@ describe Board do
             @empty_board[[2, 0]] = :o
             @empty_board[[2, 1]] = :x
             @empty_board[[2, 2]] = :x
-            expect(@empty_board.isTied?).to be false
+            expect(@empty_board.is_tied?).to be false
         end
 
         it 'should return true for a filled board with no winners' do
@@ -207,7 +207,7 @@ describe Board do
             @empty_board[[2, 0]] = :o
             @empty_board[[2, 1]] = :x
             @empty_board[[2, 2]] = :x
-            expect(@empty_board.isTied?).to be true
+            expect(@empty_board.is_tied?).to be true
         end 
     end
 end
