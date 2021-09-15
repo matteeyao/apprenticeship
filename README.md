@@ -1,4 +1,4 @@
-# Creating a Tic-Tac-Toe application with Test-Driven Development
+# Tic-Tac-Toe
 
 ## Application Quick-start Commands
 
