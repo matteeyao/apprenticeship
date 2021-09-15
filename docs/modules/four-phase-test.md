@@ -45,7 +45,7 @@ During teardown, the system under test is reset to its pre-setup state.
 
 This is usually handled implicitly by the language (releasing memory) or test framework (running inside a database transaction).
 
-## all together
+## All together
 
 The four phases are wrapped into a named test to be referenced individually.
 
