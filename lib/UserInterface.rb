@@ -7,7 +7,7 @@ class UserInterface
         puts "Welcome to Tic-Tac-Toe!"
         puts "(1) Play against a friend"
         puts "(2) Play against an easy competitor"
-        puts "(3) Play against a super computer\n\n"
+        # puts "(3) Play against a super computer\n\n"
     end
 
     # TODO: Add unit test/spec for method
