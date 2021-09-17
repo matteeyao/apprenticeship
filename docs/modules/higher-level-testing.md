@@ -1,12 +1,10 @@
-# Levels of Testing
+# Higher-Level Testing
 
+**Integration Testing**: checks the data flow from one module to other modules.
 
+**System Testing**: evaluates both functional and non-functional needs for the testing.
 
-2. **Integration Testing**: checks the data flow from one module to other modules.
-
-3. **System Testing**: evaluates both functional and non-functional needs for the testing.
-
-4. **Acceptance Testing**: checks the requirements of a specification or contract are met as per its delivery.
+**Acceptance Testing**: checks the requirements of a specification or contract are met as per its delivery.
 
 ## Unit Testing
 
@@ -144,5 +142,5 @@ Disadvantages:
 
 Sandwich Testing is a strategy in which top level modules are tested with lower level modules at the same time lower modules are integrated with top modules and tested as a system. It is a combination of Top-down and Bottom-up approaches therefore it is called Hybrid Integration Testing. It makes use of both stubs as well as drivers.
 
-# Acceptance Testing
+## Acceptance Testing
 Acceptance – You should test that the program works the way a user/customer expects the application to work. Acceptance tests ensure that the functionality meets business requirements.
