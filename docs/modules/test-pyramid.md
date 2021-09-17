@@ -734,6 +734,14 @@ I replace higher-level tests with lower-level tests if possible.
 
 4. When in doubt use the [Rule of Three](https://blog.codinghorror.com/rule-of-three/) to decide when to refactor. *Use before reuse*
 
+    There are two "rules of three" in [software] reuse:
+
+        a. It is three times as difficult to build reusable components as single use components, and
+
+        b. a reusable component should be tried out in three different applications before it will be sufficiently general to accept into a reuse library.
+
+    **To build something truly reusable, you must convince three different audiences to use it thoroughly first.**
+
 ## Conclusion
 
 [sample code](https://github.com/hamvocke/spring-testing)
