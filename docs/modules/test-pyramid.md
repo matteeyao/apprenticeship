@@ -1,4 +1,6 @@
-# Integration Tests
+# Practical Test Pyramid
+
+## Integration Tests
 
 Test the integration of your application w/ all the parts that live outside of your application.
 
