@@ -24,7 +24,7 @@ class Game
     # TODO: Add unit/integration test/spec for method
     def play_turn
         current_player = self.players[self.turn]
-        pos = current_player.move(self)
+        pos = current_player.move(self, self.turn)
         self.board[pos] = self.turn
     end
 

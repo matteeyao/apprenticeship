@@ -51,7 +51,7 @@ class Board
     end
 
     def dup
-        duped_rows = rows.map(&:dup)
+        duped_rows = grid.map(&:dup)
         self.class.new(duped_rows)
     end
 

@@ -1,6 +1,7 @@
-require_relative 'EasyPlayer'
-require_relative 'Game'
-require_relative 'HumanPlayer'
+require_relative "EasyPlayer"
+require_relative "Game"
+require_relative "HumanPlayer"
+require_relative "ImpossiblePlayer"
 
 class UserInterface
     def prompt
@@ -65,16 +66,15 @@ class UserInterface
     end
 
     # TODO: Add unit test/spec for method
-    def initialize_and_start_impossible_game
-        # print "Enter your name: "
-        # player_one_name = gets.chomp
-        # print "Enter your mark (Hit enter to default to \u{274C}): "
-        # player_one_mark = gets.chomp == "" ? "\u{274C}" : gets.chomp
-        # puts
-        # human_player = Player.new(player_one_name, player_one_mark)
-        # comp_player = EasyPlayer.new
-        # Game.new(human_player, comp_player)
-    end
+    # def initialize_and_start_impossible_game
+    #     print "Enter your mark (Hit enter to default to \u{274C}): "
+    #     human_player_mark = gets.chomp
+    #     human_player_mark = human_player_mark == "" ? "\u{274C}" : human_player_mark
+    #     puts
+    #     human_player = HumanPlayer.new(human_player_mark)
+    #     comp_player = ImpossiblePlayer.new
+    #     Game.new(human_player, comp_player).run
+    # end
 end
 
 # TODO: Add integration test/spec for script

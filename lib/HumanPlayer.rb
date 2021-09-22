@@ -50,7 +50,7 @@ class HumanPlayer < Player
     end
 
     # TODO: Add unit/integration test/spec for method
-    def move(game)
+    def move(game, _mark)
         game.show
         fetch_pos(game)
     end
