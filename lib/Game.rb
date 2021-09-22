@@ -54,3 +54,8 @@ class Game
         print_results
     end
 end
+
+# TEST
+if $PROGRAM_NAME == __FILE__
+    puts Board.new(4).grid
+end
