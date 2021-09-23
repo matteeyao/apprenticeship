@@ -131,8 +131,3 @@ class Board
         !winner.nil?
     end
 end
-
-if $PROGRAM_NAME == __FILE__
-    print Board.new(4).grid
-end
-
