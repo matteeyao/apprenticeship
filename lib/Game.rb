@@ -5,18 +5,23 @@ class Game
     class IllegalMoveError < RuntimeError
     end
 
-    attr_reader :board, :players, :turn
+    attr_reader :grid_size, :board, :players, :turn
 
-    def initialize(player1, player2)
+    def initialize(player1, player2, grid_size = 3)
+        @grid_size = grid_size
         @players = { :x => player1, :o => player2 }
-        @board = Board.new
+        @board = Board.new(grid_size)
         @turn = :x
+    end
+
+    def generate_row_separators
+        "-" * ((grid_size - 2) * 4 + (2 * 3) + (grid_size - 1))
     end
 
     def show
         self.board.grid.each_with_index do |row, idx|
             puts row.map { |el| el.nil? ? "  " : players[el].mark }.join(" | ")
-            puts "------------" if (idx != 2)
+            puts generate_row_separators if (idx != grid_size - 1)
         end
         puts
     end
@@ -53,9 +58,4 @@ class Game
 
         print_results
     end
-end
-
-# TEST
-if $PROGRAM_NAME == __FILE__
-    puts Board.new(4).grid
 end

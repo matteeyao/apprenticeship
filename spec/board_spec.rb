@@ -42,7 +42,7 @@ describe Board do
             end
         end
 
-        context "if grid_size is not provided" do
+        context "if grid_size 3 is provided" do
             it "sets up an instance variable grid that is three-by-three" do
                 expect(@empty_board.grid.length).to eq(3)
                 @empty_board.grid.each { |row| expect(row.length).to eq(3)}

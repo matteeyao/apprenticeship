@@ -11,7 +11,7 @@ describe HumanPlayer do
 
     describe '@position_dictionary' do
         it 'should have nine different positional key-value pairs' do
-            expect(@test_player_one.class.position_dictionary.length()).to eq(9)
+            expect(@test_player_one.position_dictionary.length()).to eq(9)
         end
     end
 
@@ -138,3 +138,4 @@ describe HumanPlayer do
         # end
     end
 end
+

@@ -2,32 +2,38 @@ require_relative 'Player'
 
 class HumanPlayer < Player
 
-    @@position_dictionary = {
-        "1" => [0, 0], "2" => [0, 1], "3" => [0, 2],
-        "4" => [1, 0], "5" => [1, 1], "6" => [1, 2],
-        "7" => [2, 0], "8" => [2, 1], "9" => [2, 2]
-    }
-
-    def self.position_dictionary
-        @@position_dictionary
+    def self.generate_position_dictionary(grid_size)
+        position_dictionary = {}
+        key = 1
+        (0...grid_size).each do |row_idx|
+            (0...grid_size).each do |col_idx|
+                position_dictionary[key.to_s] = [row_idx, col_idx]
+                key += 1
+            end
+        end
+        position_dictionary
     end
 
-    def initialize(mark)
+    attr_reader :position_dictionary, :grid_size
+
+    def initialize(mark, grid_size = 3)
         super(mark)
+        @position_dictionary = self.class.generate_position_dictionary(grid_size)
+        @grid_size = grid_size
     end
 
     def fetch_input
-        print "#{mark} enter a position 1-9: "
+        print "#{mark} enter a position 1-#{grid_size * grid_size}: "
         input = gets.chomp
         return input
     end
 
     def convert_input_to_pos(input)
-        return self.class.position_dictionary[input]
+        return self.position_dictionary[input]
     end
 
     def is_valid_input?(input)
-        self.class.position_dictionary.keys.include?(input)
+        self.position_dictionary.keys.include?(input)
     end
 
     def is_vacant_pos?(game, input)

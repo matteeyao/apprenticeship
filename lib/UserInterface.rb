@@ -1,7 +1,6 @@
 require_relative "EasyPlayer"
 require_relative "Game"
 require_relative "HumanPlayer"
-require_relative "ImpossiblePlayer"
 
 class UserInterface
     def prompt
@@ -17,7 +16,6 @@ class UserInterface
         loop do            
             input = gets.to_i
             if is_valid_input?(input)
-                puts
                 return input
             end
             print "Invalid option. Choose again from options 1-3: "
@@ -42,6 +40,10 @@ class UserInterface
 
     # TODO: Add unit test/spec for method
     def initialize_and_start_custom_game
+        print "Enter a grid size greater than 2 (Hit enter to default to 3): "
+        grid_size = gets.to_i
+        grid_size = grid_size == 0 ? 3 : grid_size
+        puts
         print "Enter player one's mark (Hit enter to default to \u{274C}): "
         player_one_mark = gets.chomp 
         player_one_mark = player_one_mark == "" ? "\u{274C}" : player_one_mark
@@ -49,20 +51,24 @@ class UserInterface
         player_two_mark = gets.chomp 
         player_two_mark = player_two_mark == "" ? "\u{2B55}" : player_two_mark
         puts
-        player_one = HumanPlayer.new(player_one_mark)
-        player_two = HumanPlayer.new(player_two_mark)
-        Game.new(player_one, player_two).run
+        player_one = HumanPlayer.new(player_one_mark, grid_size)
+        player_two = HumanPlayer.new(player_two_mark, grid_size)
+        Game.new(player_one, player_two, grid_size).run
     end
 
     # TODO: Add unit test/spec for method
     def initialize_and_start_easy_game
+        print "Enter a grid size greater than 2 (Hit enter to default to 3): "
+        grid_size = gets.to_i
+        grid_size = grid_size == 0 ? 3 : grid_size
+        puts
         print "Enter your mark (Hit enter to default to \u{274C}): "
         human_player_mark = gets.chomp
         human_player_mark = human_player_mark == "" ? "\u{274C}" : human_player_mark
         puts
-        human_player = HumanPlayer.new(human_player_mark)
+        human_player = HumanPlayer.new(human_player_mark, grid_size)
         comp_player = EasyPlayer.new
-        Game.new(human_player, comp_player).run
+        Game.new(human_player, comp_player, grid_size).run
     end
 
     # TODO: Add unit test/spec for method

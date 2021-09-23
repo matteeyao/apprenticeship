@@ -7,9 +7,9 @@ class Board
 
     attr_reader :grid_size, :grid
 
-    def initialize(grid_size = 3)
+    def initialize(grid_size, grid = self.class.blank_grid(grid_size))
         @grid_size = grid_size
-        @grid = self.class.blank_grid(grid_size)
+        @grid = grid
     end
 
     def self.is_valid_grid_size?(grid_size)
@@ -82,7 +82,7 @@ class Board
 
     def dup
         duped_rows = grid.map(&:dup)
-        self.class.new(duped_rows)
+        self.class.new(grid_size, duped_rows)
     end
 
     def is_valid?(pos)
@@ -131,3 +131,8 @@ class Board
         !winner.nil?
     end
 end
+
+if $PROGRAM_NAME == __FILE__
+    print Board.new(4).grid
+end
+

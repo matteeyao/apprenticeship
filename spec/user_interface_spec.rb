@@ -10,7 +10,7 @@ describe UserInterface do
         it 'prompts the user for an input' do
             expect do
                 @text_interface.prompt
-            end.to output("Welcome to Tic-Tac-Toe!\n(1) Play against a friend\n(2) Play against an easy competitor\n(3) Play against a super computer\n\n")
+            end.to output("Welcome to Tic-Tac-Toe!\n(1) Play against a friend\n(2) Play against an easy competitor\n")
                 .to_stdout
         end
     end
