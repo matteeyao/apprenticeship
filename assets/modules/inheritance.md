@@ -1,4 +1,4 @@
-# Inheritance
+# Acquiring Behavior through Inheritance
 
 ## Extending Classes
 
@@ -169,3 +169,64 @@ class Human < Animal
   end
 end
 ```
+
+## 6.1 Understanding Classical Inheritance
+
+Inheritance is, at its core, a mechanism for *automatic message delegation*.
+
+It defines a forwarding path for not-understood messages.
+
+It creates relationships such that, if one object cannot respond to a received message, it delegates that message to another.
+
+In classical inheritance, these relationships are defined by creating subclasses.
+
+Messages are forwarded from subclass to superclass; the shared code is defined in the class hierarchy.
+
+## 6.2 Recognizing Where to Use Inheritance
+
+### 6.2.1 Starting w/ a Concrete Class
+
+```rb
+class Bicycle
+  attr_reader :size, :tape_color
+
+  def initialize(**opts)
+    @size       = opts[:size]
+    @tape_color = opts[:tape_color]
+  end
+
+  # every bike has the same defaults for tire and chain size
+  def spares
+    { chain:      '11-speed',
+      tire_size:  '23',
+      tape_color: tape_color }
+  end
+
+  # Many other methods...
+end
+
+bike = Bicycle.new(
+  size:       'M',
+  tape_color: 'red')
+
+puts bike.size
+# → M
+
+puts bike.spares
+# → {:chain=>"11-speed", :tire_size=>"23", :tape_color=>"red"}
+```
+
+Bikes have an overall size, a handlebar tape color, a tire size, and a chain type.
+
+These attributes are passed to a new bike in the `initialize` method via the `**opts` argument.
+
+`**opts` indicates that `initialize` will accept any number of keyword arguments and return them as a `Hash`. This leads to the `opts` references.
+
+`Bicycle` instances can respond to the `spares`, `size`, and `tape_color` messages, and a `Mechanic` can figure out what spare parts to take by asking each `Bicycle` for its `spares`.
+
+Despite the fact that the `spares` method commits the sin of embedding default strings directly inside itself, the above code is fairly reasonable.
+
+### 6.2.2 Embedding Multiple Types
+
+
+
