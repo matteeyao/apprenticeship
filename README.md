@@ -1,8 +1,4 @@
-# Tic-Tac-Toe AI
-
-Write a `TicTacToeNode` class which utilizes the `Board` class.
-
-We will also be writing a `ImpossiblePlayer` class which builds on top of the `Player` class.
+# Tic-Tac-Toe
 
 ## Application Quick-start Commands
 

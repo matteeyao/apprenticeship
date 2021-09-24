@@ -1,6 +1,6 @@
 # Dependency Inversion
 
-_“Depend on abstractions, rather than concrete implementations”_
+*“Depend on abstractions, rather than concrete implementations”*
 
 One of the most dangerous parts when changing a system is having your changes unexpectedly influence other, unrelated parts of your system.
 
