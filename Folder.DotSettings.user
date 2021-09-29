@@ -1,0 +1,12 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=252b1150_002Ddf44_002D4b0f_002Dbde6_002Db1e6c9934720/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="FizzBuzzTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::.NETCoreApp,Version=v3.1::test.FizzBuzzTest&lt;/TestId&gt;
+    &lt;TestId&gt;NUnit3x::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::.NETCoreApp,Version=v3.1::test.BoardTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=83cbe291_002Dbfee_002D4b62_002D9db6_002Da9a90fc144cc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="BoardTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;NUnit3x::E58F4AA9-B1CC-A69B-1C4C-0873D391E987::.NETCoreApp,Version=v3.1::test.BoardTest&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
