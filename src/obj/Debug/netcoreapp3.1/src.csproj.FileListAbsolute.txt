@@ -1,0 +1,12 @@
+/Users/mattyyao/Desktop/TicTacToe/src/bin/Debug/netcoreapp3.1/src.deps.json
+/Users/mattyyao/Desktop/TicTacToe/src/bin/Debug/netcoreapp3.1/src.runtimeconfig.json
+/Users/mattyyao/Desktop/TicTacToe/src/bin/Debug/netcoreapp3.1/src.runtimeconfig.dev.json
+/Users/mattyyao/Desktop/TicTacToe/src/bin/Debug/netcoreapp3.1/src.dll
+/Users/mattyyao/Desktop/TicTacToe/src/bin/Debug/netcoreapp3.1/src.pdb
+/Users/mattyyao/Desktop/TicTacToe/src/obj/Debug/netcoreapp3.1/src.csprojAssemblyReference.cache
+/Users/mattyyao/Desktop/TicTacToe/src/obj/Debug/netcoreapp3.1/src.AssemblyInfoInputs.cache
+/Users/mattyyao/Desktop/TicTacToe/src/obj/Debug/netcoreapp3.1/src.AssemblyInfo.cs
+/Users/mattyyao/Desktop/TicTacToe/src/obj/Debug/netcoreapp3.1/src.csproj.CoreCompileInputs.cache
+/Users/mattyyao/Desktop/TicTacToe/src/obj/Debug/netcoreapp3.1/src.dll
+/Users/mattyyao/Desktop/TicTacToe/src/obj/Debug/netcoreapp3.1/src.pdb
+/Users/mattyyao/Desktop/TicTacToe/src/obj/Debug/netcoreapp3.1/src.genruntimeconfig.cache

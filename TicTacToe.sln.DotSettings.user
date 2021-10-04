@@ -1,0 +1,29 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=2582184d_002Da6b6_002D4f43_002D851c_002D8b4442cfcc99/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from BoardTest.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;3B49C40D-1545-4D3B-9C0B-6258363C23C5/f:BoardTest.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7b3598b4_002Db1b4_002D4044_002Da34d_002D09443ab0506c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from BoardTest.cs #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Or&gt;
+    &lt;ProjectFile&gt;3B49C40D-1545-4D3B-9C0B-6258363C23C5/f:BoardTest.cs&lt;/ProjectFile&gt;
+    &lt;TestAncestor&gt;
+      &lt;TestId&gt;NUnit3x::3B49C40D-1545-4D3B-9C0B-6258363C23C5::.NETCoreApp,Version=v3.1::test.UI.OutputTest.OutputAsksForName&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::3B49C40D-1545-4D3B-9C0B-6258363C23C5::.NETCoreApp,Version=v3.1::test.UI.OutputTest.OutputAsksForMove&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::3B49C40D-1545-4D3B-9C0B-6258363C23C5::.NETCoreApp,Version=v3.1::test.UI.OutputTest.ConsoleAsksForMarker&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::3B49C40D-1545-4D3B-9C0B-6258363C23C5::.NETCoreApp,Version=v3.1::test.UI.OutputTest.ConsoleAsksForName&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::3B49C40D-1545-4D3B-9C0B-6258363C23C5::.NETCoreApp,Version=v3.1::test.GameLogic.BoardEvaluatorTest&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::3B49C40D-1545-4D3B-9C0B-6258363C23C5::.NETCoreApp,Version=v3.1::test.GameLogic.RulesTest&lt;/TestId&gt;
+      &lt;TestId&gt;NUnit3x::3B49C40D-1545-4D3B-9C0B-6258363C23C5::.NETCoreApp,Version=v3.1::test.UI.ValidatorTest&lt;/TestId&gt;
+    &lt;/TestAncestor&gt;
+    &lt;ProjectFile&gt;3B49C40D-1545-4D3B-9C0B-6258363C23C5/d:UI/f:OutputTest.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;3B49C40D-1545-4D3B-9C0B-6258363C23C5/d:UI/f:MessageHandlerTest.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;3B49C40D-1545-4D3B-9C0B-6258363C23C5/d:UI/f:PromptTest.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;3B49C40D-1545-4D3B-9C0B-6258363C23C5/d:Players/f:HumanTest.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;3B49C40D-1545-4D3B-9C0B-6258363C23C5/d:Players/d:Strategies/f:EasyStrategyTest.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;3B49C40D-1545-4D3B-9C0B-6258363C23C5/d:Players/d:Strategies/f:MinimaxTest.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;3B49C40D-1545-4D3B-9C0B-6258363C23C5/d:Players/d:Strategies/f:HardStrategyTest.cs&lt;/ProjectFile&gt;
+    &lt;ProjectFile&gt;3B49C40D-1545-4D3B-9C0B-6258363C23C5/d:Players/f:ComputerTest.cs&lt;/ProjectFile&gt;
+  &lt;/Or&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c46d9dd3_002D6eab_002D43dd_002Dade4_002Dc0941e10e547/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from BoardTest.cs #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;ProjectFile&gt;3B49C40D-1545-4D3B-9C0B-6258363C23C5/f:BoardTest.cs&lt;/ProjectFile&gt;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
