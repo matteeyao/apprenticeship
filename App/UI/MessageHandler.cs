@@ -62,5 +62,15 @@ namespace App.UI
         {
             Console.WriteLine("Position is already taken!\n");
         }
+
+        public static void PrintDeclarationOfWinner(string mark)
+        {
+            Console.WriteLine($"{mark} won the game!");
+        }
+
+        public static void PrintDeclarationOfDraw()
+        {
+            Console.WriteLine("No one wins!");
+        }
     }
 }
