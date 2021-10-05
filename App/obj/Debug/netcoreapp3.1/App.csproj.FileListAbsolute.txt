@@ -1,0 +1,12 @@
+/Users/mattyyao/Documents/CS312/appr/App/bin/Debug/netcoreapp3.1/App.deps.json
+/Users/mattyyao/Documents/CS312/appr/App/bin/Debug/netcoreapp3.1/App.runtimeconfig.json
+/Users/mattyyao/Documents/CS312/appr/App/bin/Debug/netcoreapp3.1/App.runtimeconfig.dev.json
+/Users/mattyyao/Documents/CS312/appr/App/bin/Debug/netcoreapp3.1/App.dll
+/Users/mattyyao/Documents/CS312/appr/App/bin/Debug/netcoreapp3.1/App.pdb
+/Users/mattyyao/Documents/CS312/appr/App/obj/Debug/netcoreapp3.1/App.csprojAssemblyReference.cache
+/Users/mattyyao/Documents/CS312/appr/App/obj/Debug/netcoreapp3.1/App.AssemblyInfoInputs.cache
+/Users/mattyyao/Documents/CS312/appr/App/obj/Debug/netcoreapp3.1/App.AssemblyInfo.cs
+/Users/mattyyao/Documents/CS312/appr/App/obj/Debug/netcoreapp3.1/App.csproj.CoreCompileInputs.cache
+/Users/mattyyao/Documents/CS312/appr/App/obj/Debug/netcoreapp3.1/App.dll
+/Users/mattyyao/Documents/CS312/appr/App/obj/Debug/netcoreapp3.1/App.pdb
+/Users/mattyyao/Documents/CS312/appr/App/obj/Debug/netcoreapp3.1/App.genruntimeconfig.cache
