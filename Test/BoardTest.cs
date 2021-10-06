@@ -11,7 +11,7 @@ namespace Test
         [SetUp]
         public void Setup()
         {
-            board = new Board(Board.Dimensions.ThreeByThree);
+            board = new Board(3);
         }
 
         [Test]
@@ -31,6 +31,7 @@ namespace Test
         [Test]
         public void AcknowledgesFieldAlreadyHasMark()
         {
+            bool isEmpty = true;
             Assert.AreEqual(true, board.IsEmptyField(4));
             
             board.SetField(4, "x");
@@ -48,15 +49,15 @@ namespace Test
         public void IdentifiesRowWinningMark()
         {
             string[] grid = new string[9] {"x", "x", "x", "4", "5", "6", "7", "8", "9"};
-            Board firstBoard = new Board(Board.Dimensions.ThreeByThree, grid);
+            Board firstBoard = new Board(3, grid);
             Assert.AreEqual("x", firstBoard.Winner());
             
             grid = new string[9] {"1", "2", "3", "x", "x", "x", "7", "8", "9"};
-            Board secondBoard = new Board(Board.Dimensions.ThreeByThree, grid);
+            Board secondBoard = new Board(3, grid);
             Assert.AreEqual("x", secondBoard.Winner());
             
             grid = new string[9] {"1", "2", "3", "4", "5", "6", "o", "o", "o"};
-            Board thirdBoard = new Board(Board.Dimensions.ThreeByThree, grid);
+            Board thirdBoard = new Board(3, grid);
             Assert.AreEqual("o", thirdBoard.Winner());
         }
         
@@ -64,15 +65,15 @@ namespace Test
         public void IdentifiesColumnWinningMark()
         {
             string[] grid = new string[9] {"x", "2", "3", "x", "5", "6", "x", "8", "9"};
-            Board firstBoard = new Board(Board.Dimensions.ThreeByThree, grid);
+            Board firstBoard = new Board(3, grid);
             Assert.AreEqual("x", firstBoard.Winner());
             
             grid = new string[9] {"1", "x", "3", "4", "x", "6", "7", "x", "9"};
-            Board secondBoard = new Board(Board.Dimensions.ThreeByThree, grid);
+            Board secondBoard = new Board(3, grid);
             Assert.AreEqual("x", secondBoard.Winner());
             
             grid = new string[9] {"1", "2", "o", "4", "5", "o", "7", "8", "o"};
-            Board thirdBoard = new Board(Board.Dimensions.ThreeByThree, grid);
+            Board thirdBoard = new Board(3, grid);
             Assert.AreEqual("o", thirdBoard.Winner());
         }
         
@@ -80,11 +81,11 @@ namespace Test
         public void IdentifiesDiagonalWinningMark()
         {
             string[] grid = new string[9] {"x", "2", "3", "4", "x", "6", "7", "8", "x"};
-            Board firstBoard = new Board(Board.Dimensions.ThreeByThree, grid);
+            Board firstBoard = new Board(3, grid);
             Assert.AreEqual("x", firstBoard.Winner());
             
             grid = new string[9] {"1", "2", "o", "4", "o", "6", "o", "8", "9"};
-            Board secondBoard = new Board(Board.Dimensions.ThreeByThree, grid);
+            Board secondBoard = new Board(3, grid);
             Assert.AreEqual("o", secondBoard.Winner());
         }
 
@@ -92,11 +93,11 @@ namespace Test
         public void IdentifiesDraw()
         {
             string[] grid = new string[9] {"x", "x", "o", "o", "o", "x", "x", "o", "x"};
-            Board firstBoard = new Board(Board.Dimensions.ThreeByThree, grid);
+            Board firstBoard = new Board(3, grid);
             Assert.AreEqual(true, firstBoard.IsTied());
             
             grid = new string[9] {"x", "x", "x", "o", "o", "x", "x", "o", "o"};
-            Board secondBoard = new Board(Board.Dimensions.ThreeByThree, grid);
+            Board secondBoard = new Board(3, grid);
             Assert.AreEqual(false, secondBoard.IsTied());
         }
     }

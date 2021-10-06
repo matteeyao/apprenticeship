@@ -6,54 +6,51 @@ namespace App
 {
     public class Board
     {
-        public enum Marks { x, o };
+        private readonly string[] _grid;
+        private readonly int _dimension;
 
-        public enum Dimensions
+        public Board(int dimension, string[] grid = null)
         {
-            ThreeByThree=3,
-            FourByFour=4,
-            FiveByFive=5
-        };
-        private readonly string[] grid;
-        private readonly int dimension;
-
-        public Board(Dimensions dimension, string[] grid = null)
-        {
-            this.dimension = (int) dimension;
-            this.grid = grid ?? GenerateGrid((int) dimension);
+            this._dimension = dimension;
+            this._grid = grid ?? GenerateGrid(dimension);
         }
 
         public string[] GetGrid()
         {
-            return this.grid;
+            return this._grid;
         }
 
         public string GetField(int position)
         {
-            return this.grid[position];
+            return _grid[position];
         }
 
         public void SetField(int position, string mark)
         {
-            this.grid[position] = mark;
+            _grid[position] = mark;
         }
 
         public bool IsValidField(int position)
         {
-            int numFields = (int)Math.Pow(this.dimension, 2);
-            return !(position < 0 || numFields < position);
+            int numFields = (int)Math.Pow(_dimension, 2);
+            if (position < 0 || numFields < position)
+            {
+                return false;
+            }
+
+            return true;
         }
 
         public bool IsEmptyField(int position)
         {
-            // return !(this.GetField(position).Equals(Board.Marks.x) || this.GetField(position).Equals("o"));
-            return !Enum.IsDefined(typeof(Marks), this.GetField(position));
+            return !this.GetField(position).Equals("x") && 
+                !this.GetField(position).Equals("o");
         }
         
         public Board Duplicate()
         {
-            string[] dupedGrid = (string[]) this.grid.Clone();
-            return new Board((Dimensions) Enum.ToObject(typeof(Dimensions), this.dimension), dupedGrid);
+            string[] dupedGrid = (string[]) this._grid.Clone();
+            return new Board(this._dimension, dupedGrid);
         }
 
         public string Winner()
@@ -98,7 +95,7 @@ namespace App
                 return false;
             }
         
-            foreach (string field in this.grid)
+            foreach (string field in this._grid)
             {
                 Int32.TryParse(field, out int val);
                 if (val != 0)
@@ -118,12 +115,12 @@ namespace App
                 if (ReferenceEquals(x, null)) return false;
                 if (ReferenceEquals(y, null)) return false;
                 if (x.GetType() != y.GetType()) return false;
-                return Equals(x.grid, y.grid) && x.dimension == y.dimension;
+                return Equals(x._grid, y._grid) && x._dimension == y._dimension;
             }
 
             public int GetHashCode(Board obj)
             {
-                return HashCode.Combine(obj.grid, obj.dimension);
+                return HashCode.Combine(obj._grid, obj._dimension);
             }
         }
 
@@ -137,11 +134,11 @@ namespace App
 
         private string[,] GetRows()
         {
-            int dim = this.dimension;
+            int dim = this._dimension;
             string[,] rows = new string[dim, dim];
-            for (int i = 0; i < this.grid.Length; i++)
+            for (int i = 0; i < this._grid.Length; i++)
             {
-                rows[i / dim, i % dim] = this.grid[i];
+                rows[i / dim, i % dim] = this._grid[i];
             }
 
             return rows;
@@ -149,11 +146,11 @@ namespace App
         
         private string[,] GetColumns()
         {
-            int dim = this.dimension;
+            int dim = this._dimension;
             string[,] cols = new string[dim, dim];
-            for (int i = 0; i < this.grid.Length; i++)
+            for (int i = 0; i < this._grid.Length; i++)
             {
-                cols[i % dim, i / dim] = this.grid[i];
+                cols[i % dim, i / dim] = this._grid[i];
             }
 
             return cols;
@@ -161,16 +158,16 @@ namespace App
         
         private string[,] GetDiagonals()
         {
-            int dim = this.dimension;
+            int dim = this._dimension;
             string[,] diags = new string[2, dim];
-            for (int i = 0; i < this.grid.Length; i += (dim + 1))
+            for (int i = 0; i < this._grid.Length; i += (dim + 1))
             {
-                diags[0, i % dim] = this.grid[i];
+                diags[0, i % dim] = this._grid[i];
             }
 
-            for (int i = dim - 1; i < this.grid.Length - 1; i += (dim - 1))
+            for (int i = dim - 1; i < this._grid.Length - 1; i += (dim - 1))
             {
-                diags[1, i / dim] = this.grid[i];
+                diags[1, i / dim] = this._grid[i];
             }
 
             return diags;

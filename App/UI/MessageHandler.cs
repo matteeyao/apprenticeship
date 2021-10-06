@@ -37,15 +37,20 @@ namespace App.UI
             Console.Write("Invalid board size. Enter board size 3, 4, or 5: ");
         }
         
-        public static void PrintRequestForPlayerOnesMark(bool isOpponentComputer)
+        public static void PrintRequestForPlayerOnesMarker(bool isOpponentComputer)
         {
             string title = isOpponentComputer ? "your" : "player one's";
             Console.Write($"Enter {title} mark (Hit enter to default to \u274C): ");
         }
 
-        public static void PrintRequestForPlayerTwosMark()
+        public static void PrintRequestForPlayerTwosMarker()
         {
             Console.Write("Enter player two's mark (Hit enter to default to \u2B55): ");
+        }
+
+        public static void PrintCurrentBoardState()
+        {
+            
         }
         
         public static void PrintRequestForPlayerToInputMove(string mark, int boardDimension)
@@ -71,6 +76,11 @@ namespace App.UI
         public static void PrintDeclarationOfDraw()
         {
             Console.WriteLine("No one wins!");
+        }
+
+        public static string ReadInput()
+        {
+            return Console.ReadLine();
         }
     }
 }

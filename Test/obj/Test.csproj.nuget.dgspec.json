@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mattyyao/Documents/CS312/appr/Test/Test.csproj": {}
+    "/Users/mattyyao/Desktop/Test/Test/Test.csproj": {}
   },
   "projects": {
-    "/Users/mattyyao/Documents/CS312/appr/App/App.csproj": {
+    "/Users/mattyyao/Desktop/Test/App/App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mattyyao/Documents/CS312/appr/App/App.csproj",
+        "projectUniqueName": "/Users/mattyyao/Desktop/Test/App/App.csproj",
         "projectName": "App",
-        "projectPath": "/Users/mattyyao/Documents/CS312/appr/App/App.csproj",
+        "projectPath": "/Users/mattyyao/Desktop/Test/App/App.csproj",
         "packagesPath": "/Users/mattyyao/.nuget/packages/",
-        "outputPath": "/Users/mattyyao/Documents/CS312/appr/App/obj/",
+        "outputPath": "/Users/mattyyao/Desktop/Test/App/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mattyyao/.nuget/NuGet/NuGet.Config"
@@ -54,14 +54,14 @@
         }
       }
     },
-    "/Users/mattyyao/Documents/CS312/appr/Test/Test.csproj": {
+    "/Users/mattyyao/Desktop/Test/Test/Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mattyyao/Documents/CS312/appr/Test/Test.csproj",
+        "projectUniqueName": "/Users/mattyyao/Desktop/Test/Test/Test.csproj",
         "projectName": "Test",
-        "projectPath": "/Users/mattyyao/Documents/CS312/appr/Test/Test.csproj",
+        "projectPath": "/Users/mattyyao/Desktop/Test/Test/Test.csproj",
         "packagesPath": "/Users/mattyyao/.nuget/packages/",
-        "outputPath": "/Users/mattyyao/Documents/CS312/appr/Test/obj/",
+        "outputPath": "/Users/mattyyao/Desktop/Test/Test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/mattyyao/.nuget/NuGet/NuGet.Config"
@@ -75,8 +75,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "/Users/mattyyao/Documents/CS312/appr/App/App.csproj": {
-                "projectPath": "/Users/mattyyao/Documents/CS312/appr/App/App.csproj"
+              "/Users/mattyyao/Desktop/Test/App/App.csproj": {
+                "projectPath": "/Users/mattyyao/Desktop/Test/App/App.csproj"
               }
             }
           }
