@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="012f0bdd-4f85-40bf-8ed1-85302a75c5cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/img/abstraction.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/encapsulation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/inheritance.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/oop-concepts.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/polymorphism.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.apprenticeship-curriculum.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.apprenticeship-curriculum.dir/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="012f0bdd-4f85-40bf-8ed1-85302a75c5cb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,7 +55,7 @@
       <workItem from="1633615952824" duration="38000" />
       <workItem from="1633616011361" duration="41887000" />
       <workItem from="1634078022875" duration="345000" />
-      <workItem from="1634329960333" duration="24440000" />
+      <workItem from="1634329960333" duration="24740000" />
     </task>
     <servers />
   </component>
