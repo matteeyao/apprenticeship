@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="012f0bdd-4f85-40bf-8ed1-85302a75c5cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/img/process-types.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/twelve-factor/concurrency.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/twelve-factor/disposability.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/twelve-factor/port-binding.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.apprenticeship-curriculum.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.apprenticeship-curriculum.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.nancy-standalone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.nancy-standalone/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/nancy-tutorial/conclusion.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/nancy-tutorial/conclusion.md" afterDir="false" />
-    </list>
+    <list default="true" id="012f0bdd-4f85-40bf-8ed1-85302a75c5cb" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +58,7 @@
       <workItem from="1634078022875" duration="345000" />
       <workItem from="1634329960333" duration="12460000" />
       <workItem from="1634657724763" duration="18232000" />
-      <workItem from="1634909392825" duration="4288000" />
+      <workItem from="1634909392825" duration="4678000" />
     </task>
     <servers />
   </component>
