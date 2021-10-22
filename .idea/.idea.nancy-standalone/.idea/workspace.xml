@@ -8,57 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bf704824-e867-4b54-a1d0-f2d6ae08021a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.nancy-standalone/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.nancy-standalone/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.nancy-standalone/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.nancy-standalone/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.nancy-standalone/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.nancy-standalone/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.nancy-standalone/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/nancy-setup-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/nancy-setup-10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/nancy-setup-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/nancy-setup-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/nancy-setup-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/nancy-setup-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/nancy-setup-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/nancy-setup-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/nancy-setup-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/nancy-setup-9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/single-point-web-app-1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/single-point-web-app-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/single-point-web-app-3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/single-point-web-app-4.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/single-point-web-app-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/img/single-point-web-app-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/asp.net-core.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/nancy-tutorial/conclusion.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/nancy-tutorial/introduction.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/nancy-tutorial/post-data.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/nancy-tutorial/project-setup.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/nancy-tutorial/return-data.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/nancy-tutorial/securing.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/single-point-web-app.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nancy-standalone.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nancy-standalone/FunctionsModule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nancy-standalone/HelloModule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nancy-standalone/NancyStandalone.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nancy-standalone/PostData.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nancy-standalone/PostModule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nancy-standalone/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nancy-standalone/Properties/AssemblyInfo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nancy-standalone/ViewModule.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nancy-standalone/packages.config" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nancy-standalone/views/ViewTest.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.apprenticeship-curriculum.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.apprenticeship-curriculum.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/backing-services.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/twelve-factor/backing-services.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/build-release-run.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/twelve-factor/build-release-run.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/codebase.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/twelve-factor/codebase.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/config.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/twelve-factor/config.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/dependencies.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/twelve-factor/dependencies.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/processes.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/twelve-factor/processes.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.nancy-standalone/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.nancy-standalone/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +64,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634664328909</updated>
       <workItem from="1634664336770" duration="307000" />
-      <workItem from="1634664726074" duration="4550000" />
+      <workItem from="1634664726074" duration="4551000" />
     </task>
     <servers />
   </component>

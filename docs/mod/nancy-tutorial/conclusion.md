@@ -13,5 +13,3 @@ You can use Nancy quite happily under **the Mono framework** for running your ap
 It is possible also to use it w/ the newer .NET Core framework, but you have to jump through a few configuration hoops to do so.
 
 Carter allows you to use NancyFX style route definitions in standard ASP.NET and .NET Core MVC. By using Carter, you get all the ease of use of Nancy while maintaining the backing of an enterprise runtime like .Net core.
-
-
