@@ -101,3 +101,41 @@ The container start up does the following:
 6. Docker opens up port `8080` (the `-p` flag) on localhost and forwards any traffic to port `80` in the container
 
 7. Starts the container by using the CMD in the image's `Dockerfile`
+
+```
+Docker container stop <CONTAINER ID> / <NAME>
+```
+
+```
+Docker container ls
+```
+
+```
+Docker container start <CONTAINER ID> / <NAME>
+```
+
+```
+Docker container inspect <CONTAINER ID> / <NAME>
+```
+
+```
+Docker container stats
+```
+
+```
+Docker container top nginx
+```
+
+Shows processes running in the container
+
+To run another container:
+
+```
+docker container run --name <NAME> -p 81:80 -d nignx
+```
+
+Cleanup:
+
+```
+docker container rm -f nginx <NAME>
+```
