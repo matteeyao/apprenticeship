@@ -4,23 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="27b33ebd-7fe0-4fe6-9944-ed364dc02181" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.appr-curr.dir/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.appr-curr.dir/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.appr-curr.dir/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.appr-curr.dir/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.appr-curr.dir/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.appr-curr.dir/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/mod/package-tutorial/managing-the-global-packages-and-cache-folders.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/asp.net-core.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/console-to-web-app/asp.net-core.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/create-packages/Creating-a-Package.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/package-tutorial/Creating-a-Package.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/create-packages/Overview-and-Workflow.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/package-tutorial/Overview-and-Workflow.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/create-packages/creating-a-package-dotnet-cli.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/package-tutorial/creating-a-package-dotnet-cli.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/create-packages/includes/add-description.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/package-tutorial/includes/add-description.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/create-packages/includes/choose-package-id.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/package-tutorial/includes/choose-package-id.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/create-packages/nuget-packages-on-github.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/package-tutorial/nuget-packages-on-github.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/mod/single-point-web-app.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/mod/console-to-web-app/single-point-web-app.md" afterDir="false" />
-    </list>
+    <list default="true" id="27b33ebd-7fe0-4fe6-9944-ed364dc02181" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,7 +52,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634915836086</updated>
       <workItem from="1634915845687" duration="22467000" />
-      <workItem from="1635613366164" duration="1153000" />
+      <workItem from="1635613366164" duration="1458000" />
     </task>
     <servers />
   </component>
