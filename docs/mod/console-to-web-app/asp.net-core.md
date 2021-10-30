@@ -51,7 +51,6 @@ A Host is an object that encapsulates the resources of an application. For examp
 
 * *IHostedService* implementation
 
-
 ```c#
 using Microsoft.Extensions.Hosting;
 using System;
