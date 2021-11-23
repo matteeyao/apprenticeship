@@ -5,45 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0c535ce9-0bcb-4988-ad24-c0b31607fb96" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/docs.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/arrays.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/constants.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/flow-control-statements.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/functions.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/maps.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/range.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/structs.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/variables.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/interfaces/methods.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/interfaces/pointers.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/img/function-syntax.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/add-test.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/call-module.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/comile-app.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/create-module.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/handle-error.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/multiple-people.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/random-greeting.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/start-module.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/getting-started.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/restful-api.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/greetings/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/greetings/greetings.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/greetings/greetings_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/hello/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/hello/hello" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/hello/hello.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/hello/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/hello/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/hello/hello.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/playground/FibonacciClosure.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/web-service-gin/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/web-service-gin/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/docs/mod/basic-http-server/restful-services.md" beforeDir="false" afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basic-http-server/restful-services.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/docs/mod/rest-api-tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/rest-api-tutorial.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/errors.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/images.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/readers.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/buffered-channels.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/channels.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/default-selection.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/goroutines.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/range-and-close.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/select.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/sync-mutex.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/interfaces/interfaces.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/equivalent-binary-trees.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/errors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/images.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/readers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/rot13Reader.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/stringers.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http-verbs/golang/playground/FibonacciClosure.go" beforeDir="false" afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/fibonacci-closure.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,9 +49,6 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="GoLibraries">
-    <option name="indexEntireGoPath" value="false" />
-  </component>
   <component name="ProjectId" id="216dHUFGAuHgks7Eyco9tQyvwVt" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -86,6 +63,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable..is.expanded" value="true" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
     <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
     <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
@@ -95,7 +74,7 @@
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+    <property name="settings.editor.selected.configurable" value="go.vgo" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -120,11 +99,17 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+    <environment>
+      <map>
+        <entry key="GO111MODULE" value="on" />
+      </map>
+    </environment>
   </component>
 </project>
