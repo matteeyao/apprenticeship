@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0c535ce9-0bcb-4988-ad24-c0b31607fb96" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/docs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/arrays.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/constants.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/flow-control-statements.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/functions.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/maps.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/range.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/structs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/variables.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/interfaces/methods.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/interfaces/pointers.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/img/function-syntax.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/add-test.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/call-module.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/comile-app.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/create-module.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/handle-error.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/multiple-people.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/random-greeting.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/create-module/start-module.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/getting-started.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/restful-api.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/greetings/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/greetings/greetings.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/greetings/greetings_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/hello/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/hello/hello" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/create-module/hello/hello.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/hello/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/hello/go.sum" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/hello/hello.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/playground/FibonacciClosure.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/web-service-gin/go.mod" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/http-verbs/golang/web-service-gin/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http-verbs/docs/mod/basic-http-server/restful-services.md" beforeDir="false" afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basic-http-server/restful-services.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/http-verbs/docs/mod/rest-api-tutorial.md" beforeDir="false" afterPath="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod/tutorial/rest-api-tutorial.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file:///usr/local/opt/go/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="216dHUFGAuHgks7Eyco9tQyvwVt" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.formatter.settings.were.checked" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="settings.editor.selected.configurable" value="preferences.editor" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/http-verbs/docs/mod" />
+      <recent name="$PROJECT_DIR$/http-verbs/golang/assets/docs/mod" />
+      <recent name="$PROJECT_DIR$/http-verbs/golang/assets/docs/tutorial" />
+      <recent name="$PROJECT_DIR$/http-verbs/docs/mod/tutorials" />
+      <recent name="$PROJECT_DIR$/http-verbs/golang/assets/docs/tutorial/create-module" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
+</project>

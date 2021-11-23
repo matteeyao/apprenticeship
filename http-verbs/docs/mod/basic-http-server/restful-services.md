@@ -168,6 +168,3 @@ Though these are technically hard requirements that a service must fulfill in or
 Building real services is more about solving the problems at hand than meeting technical definitions. As a result, these constraints are most often used as guidelines by developers and architects, who then decide which rules to follow in their efforts to meet their own specific goals
 
 This is where the terms *partially restful* and *fully restful* come from. And in fact, most services you encounter online aren't technically RESTful
-
-
-
