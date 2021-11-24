@@ -4,27 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c535ce9-0bcb-4988-ad24-c0b31607fb96" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/errors.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/images.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/basics/readers.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/buffered-channels.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/channels.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/default-selection.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/goroutines.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/range-and-close.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/select.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/concurrency/sync-mutex.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/docs/mod/interfaces/interfaces.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/equivalent-binary-trees.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/errors.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/images.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/readers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/rot13Reader.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/stringers.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/playground/FibonacciClosure.go" beforeDir="false" afterPath="$PROJECT_DIR$/http-verbs/golang/sandbox/fibonacci-closure.go" afterDir="false" />
-    </list>
+    <list default="true" id="0c535ce9-0bcb-4988-ad24-c0b31607fb96" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
