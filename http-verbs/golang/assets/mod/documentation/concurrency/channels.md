@@ -13,7 +13,7 @@ v := <-ch  // Receive from ch, and
 Like maps and slices, channels must be created before use:
 
 ```go
-ch := make(chan int)
+ch := make(chan int) // ch has type 'chan int'
 ```
 
 By default, sends and receives block until the other side is ready. This allows goroutines to synchronize w/o explicit locks or condition variables
