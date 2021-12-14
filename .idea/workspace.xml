@@ -4,49 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c535ce9-0bcb-4988-ad24-c0b31607fb96" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/img/documentation/concurrency/empty-buffered-channel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/img/documentation/concurrency/full-buffered-channel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/img/documentation/concurrency/partially-full-buffered-channel.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/img/documentation/concurrency/three-stage-pipeline.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/img/function-syntax.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/arrays.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/constants.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/defer.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/errors.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/flow-control-statements.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/functions.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/images.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/maps.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/range.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/readers.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/structs.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/basics/variables.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/concurrency/buffered-channels.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/concurrency/channels.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/concurrency/default-selection.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/concurrency/goroutines.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/concurrency/pipelines.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/concurrency/range-and-close.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/concurrency/select.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/concurrency/sync-mutex.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/concurrency/unidirectional-channel-types.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/interfaces/interfaces.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/interfaces/methods.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/documentation/interfaces/pointers.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/tutorial/create-module/add-test.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/tutorial/create-module/call-module.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/tutorial/create-module/comile-app.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/tutorial/create-module/create-module.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/tutorial/create-module/handle-error.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/tutorial/create-module/multiple-people.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/tutorial/create-module/random-greeting.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/tutorial/create-module/start-module.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/tutorial/getting-started.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/tutorial/rest-api-tutorial.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/http-verbs/golang/assets/mod/tutorial/restful-api.md" beforeDir="false" />
-    </list>
+    <list default="true" id="0c535ce9-0bcb-4988-ad24-c0b31607fb96" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
