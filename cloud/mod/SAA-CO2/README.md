@@ -8,7 +8,7 @@
 >
 > 2. **Three** AWS accounts will be needed (development, production, security).
 >
-> 3. Build a multi-tiered VPC w/ a **scalable, resilient design**.
+> 3. Build a multi-tiered VPC w/ a **scalable, resilient design**. Includes EC2 instances, database instances, etc.
 >
 > 4. Create a **VPC peering** connection btwn 2 of our AWS accounts.
 >
@@ -22,7 +22,7 @@
 >
 > 9. Add security based on the **principle of least privilege**.
 >
-> 10. Use **cost-effective** options.
+> 10. Use **cost-effective** options to ensure the AWS environment being designed and built is done w/ cost optimization.
 
 
 
@@ -90,3 +90,75 @@ Which of the following are a part of AWS' Networking & Content Delivery services
 * VPC is part of the "Networking & Content Delivery" services
 
 * CloudFront is part of the "Networking & Content Delivery" services
+
+## Cloud Architecture Best Practices
+
+1. Design for failure and nothing fails
+
+  * Avoid single points of failure
+
+  * Multiple instances
+
+  * Multiple Availability Zones
+
+  * Separate single server into multiple tiered application where each server performs a single function, such as a separate web host and database server
+
+  * For Amazon RDS, use Multi-AZ feature 
+
+2. Build security in every layer
+
+  * Encrypt Data at rest and in transit
+
+  * Enforce principle of least privilege in IAM
+
+  * Create a robust firewall by implementing both Security Groups and Network Access Control Lists (NACL)
+
+  * Consider advanced security features and services (Amazon Inspector, Guard Duty, and AWS Shield)
+
+3. Leverage different storage options
+
+  * Move static web assets to Amazon S3
+
+  * Use Amazon CloudFront to serve globally
+
+  * Store session state in DynamoDB
+
+  * Use ElastiCache between hosts and databases
+
+4. Implement elasticity
+
+  * Implement Auto Scaling policies
+
+  * Architect resiliency to reboot and relaunch
+
+  * Leverage managed services like Amazon S3 and Amazon DynamoDB
+
+5. Think parallel
+
+  * Scale horizontally, not vertically by adding more resources to a compute application rather than adding more power to compute resources
+
+  * Decouple compute from session/state
+
+  * Use Elastic Load Balancing
+
+  * Right-size your infrastructure
+
+6. Loose coupling sets you free
+
+  * Instead of a single, ordered workflow, use multiple queues
+
+  * Use Amazon Simple Queue Service and Simple Notification Service (SQS and SNS)
+
+  * Leverage existing services
+
+7. Don't fear constraints
+
+  * Rethink traditional constraints
+
+  * Need more RAM? Distribute load across a number of commodity instances
+
+  * Better IOPS for databases?
+
+    * Consider creating a Read Replica for your database and modifying your application to separate database reads from writes.
+
+  * Response to failure?

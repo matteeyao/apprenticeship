@@ -4,9 +4,9 @@
 
 > There are two different types of Backups for RDS:
 >
-> * Automated Backups
+> * **Automated Backups**
 >
-> * Database Snapshots
+> * **Database Snapshots**
 
 ## Automated Backups
 

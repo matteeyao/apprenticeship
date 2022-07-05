@@ -134,7 +134,9 @@ We can secure our AWS account by adding multi-factor authentication
 
 **SCPs are permission boundaries and limit what the accounts can do, including the account root user of that account.**
 
-A SCP policy is a json policy doc and an SCP can be attached to an AWS Org as a whole by attaching the SCP to the root container, or attached to one or more OUs, or they can be attached to one or more AWS accounts directly. So an SCP inherits down the org structure, so if an SCP is attached to the org they affect all accounts in that org, if they are attached to an OU then they affect all accounts in that OU and the accounts below that OU, and if attached to one or more accounts then they just affect those accounts.
+**Service Control policies** enable you to allow or deny access to AWS services for individuals or group accounts in an organizational unit (OU)
+
+A SCP policy is a json policy doc and an SCP can be attached to an AWS Org as a whole by attaching the SCP to the root container, or attached to one or more Organizational Units (OU), or they can be attached to one or more AWS accounts directly. So an SCP inherits down the org structure, so if an SCP is attached to the org they affect all accounts in that org, if they are attached to an OU then they affect all accounts in that OU and the accounts below that OU, and if attached to one or more accounts then they just affect those accounts.
 
 4. What permissions does a new user start w/ in an AWS account?
 

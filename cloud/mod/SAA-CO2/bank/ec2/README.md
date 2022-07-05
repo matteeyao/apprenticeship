@@ -30,7 +30,11 @@ It is possible to perform API actions on an existing Amazon EBS Snapshot through
 
 7. Which EC2 feature uses SR-IOV?
 
-**Enhanced networking**. Enhanced networking uses single root I/O virtualization (SR-IOV) to provide high-performance networking capabilities on supported instance types. SR-IOV is a method of device virtualization that provides higher I/O performance and lower CPU utilization when compared to traditional virtualized network interfaces. Enhanced networking provides higher bandwidth, higher packet per second (PPS) performance, and consistently lower inter-instance latencies.
+**Enhanced networking**
+
+Enhanced networking uses single root I/O virtualization (SR-IOV) to provide high-performance networking capabilities on supported instance types. SR-IOV is a method of device virtualization that provides higher I/O performance and lower CPU utilization when compared to traditional virtualized network interfaces. Enhanced networking provides higher bandwidth, higher packet per second (PPS) performance, and consistently lower inter-instance latencies.
+
+Single Root I/O Virtualization will help you meet enhanced networking requirements.
 
 8. When can you attach/replace an IAM role on an EC2 instance?
 

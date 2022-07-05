@@ -1,5 +1,9 @@
 # Creating a Basic VPC and Associated Components in AWS
 
+> VPC **Flow logs** capture network flow information for a VPC, subnet, or network interfaces, and store it in the Amazon CloudWatch logs. Flow log data can help customers troubleshoot network issues. For example, to diagnose why specific traffic is not reaching an instance, which might be a result of overly restrictive security group rules.
+
+> **Host-based firewalls** are operating system firewalls that customers may enable on their own. These include built-in operating system capabilities, such as IP tables and Windows firewall, or third-party software that provides additional functionality such as deep packet inspection or network threat protection. Host-based security software works well w/ highly distributed and scalable application architectures since network packet inspection is distributed across the entire software fleet.
+
 ## Learning Objectives
 
 [ ] Create CloudWatch Log Group and VPC Flow Log to CloudWatch

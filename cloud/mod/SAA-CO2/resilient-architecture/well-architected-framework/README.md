@@ -1,5 +1,17 @@
 # The 6 Pillars of the AWS Well-Architected Framework
 
+> * A framework for ensuring infrastructures are:
+>
+>   ✓ Secure
+>
+>   ✓ High-performing
+>
+>   ✓ Resilient
+>
+>   ✓ Efficient
+>
+>   ✓ Sustainable
+
 > The AWS Well-Architected Framework is AWS's best practices and core strategies for architecting systems in the cloud, helping you design, build, and operate reliable, secure, efficient, and cost-effective systems.
 
 Creating a software system is a lot like constructing a building. If the foundation is not solid, structural problems can undermine the integrity and function of the building.

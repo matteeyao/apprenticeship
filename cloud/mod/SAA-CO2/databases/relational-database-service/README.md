@@ -1,5 +1,7 @@
 # Relational Databases
 
+> **Cost-efficient and resizable capacity**
+
 > **Relational Database Service (RDS)**
 >
 > 1. **DBaaS** = Database as a Service
@@ -12,7 +14,7 @@
 >
 >   * Structured Query Language (SQL)
 >
-> 3. **RDS supports**:
+> 3. **RDS supports these database engines**:
 >
 >   * MySQL
 >

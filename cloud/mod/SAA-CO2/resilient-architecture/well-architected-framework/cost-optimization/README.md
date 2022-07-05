@@ -56,11 +56,13 @@ There are five design principles for cost optimization in the cloud:
 >
 > For the exam, **be aware** of the AWS Well-Architected Framework and cost-optimized design best practices.
 
-> 1. **Right-Sizing**
+> 1. **Right-sizing instances**
 >
 >   * Right-sizing means picking the **correct instances for our current resources** as well as resources we plan to use. So maybe we are using a larger EC2 instance size when all we need to cover our demand is a small instance size. We can save money by right-sizing and choosing the correct instance type, but also the cheapest instance type that meets our performance requirements.
+>
+>   * Right-sizing is the process of reviewing deployed resources and seeking opportunities to downsize when possible. For example, if an application instance is consistently under-utilizing its RAM and CPU, switching that to a smaller instance can offer significant savings while maintaining the same performance.
 
-> 2. **Increase Elasticity**
+> 2. **Increasing application elasticity**
 >
 >   * Increasing elasticity means using Auto Scaling to only use resources when those resources are **needed**, and not using resources when they are not needed. This gives us a **pay-for-what-we-use model**.
 >
@@ -68,21 +70,23 @@ There are five design principles for cost optimization in the cloud:
 >
 >     * Sometimes we can use smaller instances vs. fewer larger instances for our workload. This can reduce your cost. We can use Auto-Scaling to scale up our instances when that demand scales, and then scale back down when the demand lessens. Auto Scaling can also schedule instances for periods of demand. Usually your production instances will need to be up 24/7, but what about your test or dev environment? We can use Auto Scaling to scale these instances down when they're not being used or during non-business hours. AWS provides a tool called the AWS Instance Scheduler, and this can create custom start and stop schedules for your instances. AWS provides us w/ a CloudFormation template managed by tags - another reason to add a tagging strategy to your environment.
 
-> 3. **Choose the Right Pricing Model**
+> 3. **Choosing the right pricing model**
 >
->   * AWS offers several different pricing models, reserved instances, on-demand instances, and spot instances.
+>   * AWS offers several different pricing models: reserved instances, on-demand instances, and spot instances.
 >
->     * Reserved Instances come w/ a one or three-year commitment. But w/ that commitment, you receive a lower price
+>     * **Reserved Instances** come w/ a one or three-year commitment. But w/ that commitment, you receive a lower price
 >
->     * Spot Instances tailor to flexible start and end times
+>     * **Spot Instances** tailor to flexible start and end times
 >
->     * AWS also offers a service called Trusted Advisor, which monitors our infrastructure and recommends solutions to make out infrastructure more optimized
+>     * AWS also offers a service called **Trusted Advisor**, which monitors our infrastructure and recommends solutions to make out infrastructure more optimized
 >
 >     * **Cost Explorer** monitors those costs
 >
 >   * Comes into play after we have right-sized our instances and set up Auto Scaling so that we can ensure to meet our demand, but also scale back down when that demand is no longer needed.
+>
+>   * Another example is using **Reserved Instances** for workloads that need to run most or all the time, such as production environments. This can have a significant impact on savings compared to on-demand; in some cases, up to 75 percent.
 
-> 4. **Match Storage to Usage**
+> 4. **Matching storage to usage / Optimizing storage**
 >
 >   * Reducing our storage can save money b/c we can match our storage usage to a certain storage class. AWS offers **multiple storage classes**, and we need to make sure we pick the correct one.
 >
@@ -95,6 +99,8 @@ There are five design principles for cost optimization in the cloud:
 >     * AMZN EFS
 >
 >     * Data Transfer Options: AWS Snowball Edge, AWS Snowball, AWS Snowmobile
+>
+>   * Another example is the S3 Intelligent-Tiering storage class, which is designed to optimize costs by automatically moving data to the most cost-effective storage tier.
 
 > 5. **Measure, Monitor, and Improve**
 >
