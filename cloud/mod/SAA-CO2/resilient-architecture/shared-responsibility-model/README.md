@@ -2,7 +2,7 @@
 
 ## Overview of the Shared Responsibility Model and the Well-Architected Framework
 
-![Fig. 1 Overview of the Shared Responsibility Model and the Well-Architected Framework](../../../../img/SAA-CO2/Design-Resilient-Architectures/Shared-Responsibility-Model/img.png)
+![Fig. 1 Overview of the Shared Responsibility Model and the Well-Architected Framework](../../../../img/SAA-CO2/resilient-architecture/shared-responsibility-model/diag01.png)
 
 > **What is the Shared Responsibility Model?**
 >

@@ -2,9 +2,7 @@
 
 > **Direct Connect**
 >
-> AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS. Using AWS Direct Connect, you can establish private connectivity between AWS and our datacenter, office, or colocation environment, which in many cases can reduce our network costs, increase bandwidth throughput, and provide a more consistent network experience than Internet-based connections.
-
-Essentially a direct connection into AWS done on dedicated lines.
+> AWS Direct Connect is a cloud service solution that makes it easy to establish a dedicated network connection from your premises to AWS. Using **AWS Direct Connect**, you can establish private connectivity between AWS and our datacenter, office, or co-location environment, which in many cases can reduce our network costs, increase bandwidth throughput, and provide a more consistent network experience than Internet-based connections.
 
 ## Setting up Direct Connect
 
@@ -27,6 +25,16 @@ Essentially a direct connection into AWS done on dedicated lines.
 [Getting Started with AWS Direct Connect | Amazon Web Services](https://www.youtube.com/watch?v=y4rIwSbdlS0)
 
 [How do I set up routing my AWS Direct Connect private virtual interface to access my VPC resources?](https://www.youtube.com/watch?v=mj5V3_-QEW0)
+
+## AWS Direct Connect Use Cases
+
+* Big Data
+
+* Hybrid Cloud
+
+* Latency
+
+* Disaster Recovery
 
 ## Learning summary
 

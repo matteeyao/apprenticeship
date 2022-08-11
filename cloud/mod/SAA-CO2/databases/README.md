@@ -1,5 +1,7 @@
 # Databases
 
+![Fig. 1 Common database types and use cases](../../../img/SAA-CO2/databases/diag01.png)
+
 ## What is a relational database?
 
 > Relational databases are what most of us are all used to. They have been around since the 70's. Think of a traditional spreadsheet.
@@ -142,6 +144,8 @@ There is a DAX client that is usually stored on the application itself. So when 
 >
 > Name, Date, Address to Deliver to, Delivery Status, etc.
 
+**Online transaction processing (OLTP)** databases focus on recording Update, Insertion, and Deletion data transactions. OLTP queries are simple and short, which requires less time and space to process. A great example of an OLTP system is a bank ATM, in which you can modify your bank account using short transactions. 
+
 > **OLAP transaction Example**:
 >
 > * Net Profit for EMEA and Pacific for the Digital Radio Product.
@@ -157,6 +161,8 @@ There is a DAX client that is usually stored on the application itself. So when 
 >   * Sales price of each radio
 >
 >   * Sales price - unit cost.
+
+**Online analytical processing (OLAP)** databases store historical data that has been input by OLTP. OLAP databases allow users to view different summaries of multidimensional data. Using OLAP, you can extract information from a large database and analyze it for decision-making. A good example of an OLAP system is a business intelligence tool.
 
 > Data Warehousing databases use different type of architecture both from a database perspective and infrastructure layer.
 

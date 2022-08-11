@@ -1,8 +1,8 @@
 # V. Cost Optimization Pillar
 
-The Cost Optimization pillar includes the ability to run systems to deliver business value at the lowest price point.
+> *Ability to run systems to deliver business value at the lowest price point*
 
-> Ability to run systems to deliver business value at the lowest price
+The Cost Optimization pillar includes the ability to run systems to deliver business value at the lowest price point.
 
 ## Cost-Effective Services
 
@@ -32,6 +32,10 @@ The Cost Optimization pillar includes the ability to run systems to deliver busi
 
 There are five design principles for cost optimization in the cloud:
 
+* Practice cloud financial mgmt
+
+  * Use AWS-managed services to reduce your overall cost of ownership b/c AWS can offer us a lower cost due to economies of scale
+
 * Adopt a consumption model
 
   * Pay for what you consume
@@ -44,13 +48,11 @@ There are five design principles for cost optimization in the cloud:
 
   * Stop spending money on data centers and data center operations
 
+  * Transition to serverless services
+
 * Analyze and attribute expenditure
 
-  * Track your costs and usage w/ the use of Tags, Budgets, Cost and Usage Reports, Cost Explorer, Reserved Instances 
-
-* Implement cloud financial mgmt
-
-  * Use AWS-managed services to reduce your overall cost of ownership b/c AWS can offer us a lower cost due to economies of scale
+  * Track your costs and usage w/ the use of Tags, Budgets, Cost and Usage Reports, Cost Explorer, Reserved Instances
 
 > **AWS Cost Optimization Designs**
 >

@@ -1,6 +1,86 @@
-# CloudFormation
+# CloudFormation Basics
 
-![Fig. 1 CloudFormation Overview](../../../../img/SAA-CO2/high-availability-architecture/cloudformation/diagram.png)
+You can use CloudFormation to treat your infrastructure as code. It gives you a way to model a collection of related AWS and third-party resources, provision them quickly and consistently, and manage them throughout their life-cycles.
+
+You define your AWS resources in a structured text format, either YAML or JSON, called a **CloudFormation template**. Then you can create a **CloudFormation stack** in AWS, which contains the resources created. You can then manage these resources by updating the template.
+
+CloudFormation tracks what changes need to be performed and makes all the changes while keeping your resources in a consistent state. CloudFormation can also create **Change Sets** for approval before making the changes, if you choose.
+
+> By treating infrastructure as code, CloudFormation gives you a way to:
+>
+> * Model a collection of related AWS and third-party resources
+>
+> * Provision them quickly and consistently
+>
+> * Manage them throughout their life-cycles
+
+## What problem does CloudFormation solve?
+
+CloudFormation can help you manage your AWS resources, especially resources that depend on each other. You can use CloudFormation to group your resources into **stacks**, using declarative **templates**. CloudFormation can also help you manage creating, updating, and deleting the resources within a stack. You can create resources in parallel, if possible, or create them in specific orders, if they depend on each other.
+
+## What are the benefits of CloudFormation?
+
+CloudFormation benefits include the following:
+
+> ### Automate best practices
+>
+> With CloudFormation, you can apply DevOps and GitOps best practices using widely adopted processes such as starting with a Git repository and deploying through a continuous integration and continuous delivery (CI/CD) pipeline. You can also simplify auditing changes and trigger automated deployments with pipeline integrations such as GitHub Actions and AWS CodePipeline.
+
+> ### Scale your infrastructure worldwide
+>
+> Manage resource scaling by sharing CloudFormation templates for use across your organization to meet safety, compliance, and configuration standards across all AWS accounts and Regions. Templates and parameters help simplify scaling so you can share best practices and company policies. Additionally, you can use CloudFormation StackSets to create, update, or delete stacks across multiple AWS accounts and Regions with a single operation. 
+
+> ### Integrate w/ other AWS services
+>
+> To further automate resource management across your organization, you can integrate CloudFormation with other AWS services, including AWS Identity and Access Management (IAM) for access control, AWS Config for compliance, and AWS Service Catalog for turnkey application distribution and additional governance controls. Integrations with AWS CodePipeline and other builder tools give you the ability to implement the latest DevOps best practices and improve automation, testing, and controls.
+
+> ### Manage third-party and private resources
+>
+> Model, provision, and manage third-party application resources (such as monitoring, team productivity, incident management, CI/CD, and version control applications) alongside your AWS resources. Use the open source CloudFormation CLI to build your own CloudFormation resource providers (native AWS types published as open source).
+
+> ### Extend CloudFormation w/ the community
+>
+> The CloudFormation GitHub organization offers open source projects that extend CloudFormation capabilities. You can use the CloudFormation registry and CloudFormation CLI to define and create resource providers to automate the creation of resources safely and systematically. Using CloudFormation GitHub projects, you can do things like check CloudFormation templates for policy compliance (using cfn-guard), or validate use of best practices (using cfn-lint).
+
+## How can I architect a cloud solution using CloudFormation?
+
+> Using CloudFormation, you can manage all your infrastructure with code.
+
+![Fig. 1 Using CloudFormation in your Architecture](../../../../img/SAA-CO2/high-availability-architecture/cloudformation/diag01.png)
+
+Since your infrastructure (your AWS resources) are created with code, you should manage it as code.
+
+Different users can create CloudFormation templates and submit them to your code repository. After code reviews, the code is approved and merged into your main branch. This merging initiates a build process that will create your AWS resources.
+
+## How can I use CloudFormation?
+
+> ### Single Devs - Avoid costs
+>
+> CloudFormation can help you quickly create and destroy a group of related resources, which is useful when you are learning about a new AWS service. You can quickly spin down a stack with all its resources when you are not using it and re-create it later. As you transition into using the services in production, you can start from those templates and scale up as needed.
+
+> ### Enterprise - Infrastructure as code
+>
+> Many companies use CloudFormation to manage all of their AWS resources, with CI/CD pipelines creating the stacks from code. Some companies even manage resources outside AWS using CloudFormation.
+
+> ### Disaster Recovery
+>
+> If you create your infrastructure with CloudFormation, you can quickly re-create it in a different Region or account, enabling disaster recovery and business continuity.
+
+## What else should I be aware of when using CloudFormation?
+
+One important issue is how to create the CloudFormation stacks. You can create them manually on the console, but a better approach is to create an integration pipeline. You can create this so that merging changes to your templates into the main branch creates or modifies the stacks, then use your standard code review practices to manage the templates.
+
+Another issue to keep in mind, when you get to specific resources, is how the lifecycle of each resource is managed. For example, if a change to a resource requires replacing the resource, you should be more careful when using it while it is changing. 
+
+Finally, manually updating resources that belong to a CloudFormation stack is strongly discouraged. Do not make changes to stack resources outside of CloudFormation.
+
+## How much does CloudFormation cost?
+
+The cost structure of CloudFormation is simple. CloudFormation is free for managing AWS resources. You are only charged for the resources you create and the API calls that CloudFormation performs on your behalf.
+
+## Additional CloudFormation Overview
+
+![Fig. 2 CloudFormation Overview](../../../../img/SAA-CO2/high-availability-architecture/cloudformation/diagram.png)
 
 > * Tool that allows us to **create**, **update**, and **delete** infrastructure as code
 >

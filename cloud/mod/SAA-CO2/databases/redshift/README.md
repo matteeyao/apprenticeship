@@ -1,14 +1,20 @@
 # Redshift
 
-> 1. **Redshift**: AWS's data warehousing solution
->
-> 2. **Two types of processing data**:
->
->   * **OLTP**: Online transaction processing ▶︎ Pools and/or queries of a row of data so your name, address, phone number, etc.
->
->   * **OLAP**: Online analytics processing ▶︎ Pools and/or queries a huge number of records and adds up the sum, so that could be the sum of the unit cost, the sell price, etc. depending on what that query is.
->
-> 3. Data is stored in **columns**, not rows
+> A fast, scalable data warehouse
+
+Amazon Redshift delivers 10 times faster performance than other data warehouses by using machine learning, massively parallel query execution, and columnar storage on high-performance disk. You can set up and deploy a new data warehouse in minutes. Run queries across petabytes of data in your Amazon Redshift data warehouse and exabytes of data directly from your data lake built on Amazon Simple Storage Service (Amazon S3) with Amazon Redshift Spectrum.
+
+Amazon Redshift is an enterprise-level, petabyte scale, fully managed data warehousing service. With Amazon Redshift, you can achieve efficient storage and optimum query performance through a combination of massively parallel processing, columnar data storage, and very efficient, targeted data compression encoding schemes.
+
+1. **Redshift**: AWS's data warehousing solution
+
+2. **Two types of processing data**:
+
+  * **OLTP**: Online transaction processing ▶︎ Pools and/or queries of a row of data so your name, address, phone number, etc.
+
+  * **OLAP**: Online analytics processing ▶︎ Pools and/or queries a huge number of records and adds up the sum, so that could be the sum of the unit cost, the sell price, etc. depending on what that query is.
+
+3. Data is stored in **columns**, not rows
 
 This is actually a petabyte data warehouse service, and w/ data warehousing and Redshift, there are 2 types of processing for data. Data is stored in columns, not rows. We can perform efficient, analytic queries across large data sets. So we can do this in 2 ways (mentioned above). These differ on the types of queries you run.
 

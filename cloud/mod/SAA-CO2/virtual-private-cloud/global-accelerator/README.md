@@ -1,14 +1,30 @@
 # Global Accelerator
 
-> AWS Global Accelerator is a service in which you create accelerators to improve availability and performance of your applications for local and global users.
+> **AWS Global Accelerator** is a fully managed global network traffic manager, a service in which you create accelerators to improve availability and performance of your applications for local and global users.
 >
-> Global Accelerator directs traffic to optimal endpoints over the AWS global network. This improves the availability and performance of your internet applications that are used by a global audience.
+> **Global Accelerator** directs traffic to optimal endpoints over the AWS global network. This improves the availability and performance of your internet applications that are used by a global audience.
 >
-> By default, Global Accelerator provides you w/ two static IP addresses that you associate w/ your accelerator.
+> By default, **Global Accelerator** provides you w/ two static IP addresses that you associate w/ your accelerator.
 >
 > Alternatively, you can bring your own.
 
 ![Fig. 1 How it works](https://d1.awsstatic.com/r2018/b/ubiquity/global-accelerator-how-it-works.feb297eb78d8cc55205874a1691e0ea2bc8bdbf1.png)
+
+Routes traffic to optimal AWS endpoints based on:
+
+* Endpoint health
+
+* Client locations
+
+* User-configured weights
+
+**Global Accelerator**
+
+1. Helps create a more robust architecture
+
+2. Increases network stability
+
+3. Provides automatic health checking and routing
 
 ## Global Accelerator components
 

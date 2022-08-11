@@ -14,6 +14,16 @@
 
 **CloudWatch Logs** allow us to collect, monitor, and create actions based on log data.
 
+> ### CloudWatch Logs
+>
+> * Monitor and troubleshoot systems and applications using existing log files
+>
+>   * Monitor logs for specific phrases, values, or patterns
+>
+> * Retrieve the associated log data from CloudWatch Logs
+>
+> * Agent for Ubuntu, Amazon Linux, and Windows
+
 **CloudWatch Events** allow us to create an event to then perform an action when the event occurs.
 
 ## What can CloudWatch monitor?

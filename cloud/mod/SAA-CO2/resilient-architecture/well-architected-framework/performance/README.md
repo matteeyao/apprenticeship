@@ -18,6 +18,8 @@ There are five design principles for performance efficiency in the cloud:
 
 * Consider mechanical sympathy
 
+  * How a tool or system is best applied to the customer's business goals. Using the right tool for the right job effectively and cost-optimized
+
 ### Best Practices
 
 Take a data-driven approach to building a high-performance architecture. Gather data on all aspects of the architecture, from the high-level design to the selection and configuration of resource types.

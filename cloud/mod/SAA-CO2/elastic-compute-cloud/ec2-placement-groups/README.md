@@ -18,7 +18,7 @@
 >
 > 3. **Partitioned Placement Groups**
 >
-> * Partitioned Placement Grouping is similar to Spread Placement Grouping, but differs b/c you can multiple EC2 instances within a single partition. Failure instead is isolated to a partition (say 3 or 4 instances instead of 1), yet you enjoy the benefits of close proximity for improved network performance.
+> * Partitioned Placement Grouping is similar to Spread Placement Grouping, but differs b/c you can have multiple EC2 instances within a single partition. Failure instead is isolated to a partition (say 3 or 4 instances instead of 1), yet you enjoy the benefits of close proximity for improved network performance.
 >
 > * W/ this placement group, you have multiple instance living together on the same hardware inside of different availability zones across one or more regions.
 >

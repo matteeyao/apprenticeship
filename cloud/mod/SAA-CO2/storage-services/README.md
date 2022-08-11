@@ -1,5 +1,7 @@
 # Storage Types
 
+Whether on premises or in the cloud, there are three primary types of storage: block, file, and object. The way storage hardware manufacturers and cloud service providers implement these can differ. However, the fundamentals for each storage type are basically the same, regardless of where the storage is located, who manufactures the hardware, or who provides the service.
+
 ## Block storage
 
 A block is a range of bytes or bits on a storage device. Block storage files are divided into blocks and written directly to empty blocks on a physical drive. Each block is assigned a unique identifier and then written to the disk in the most efficient manner possible. Since blocks are assigned identifiers, they do not need to be stored in adjacent sections of the disk. Indeed they can be spread across multiple disks or environments. You can retrieve the individual blocks separately from the rest of the file, which makes block storage excellent for technology like relational databases.

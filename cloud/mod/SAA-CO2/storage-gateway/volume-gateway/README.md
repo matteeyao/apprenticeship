@@ -1,0 +1,1 @@
+Volume Gateway presents cloud-backed Internet Small Computer System Interface (iSCSI) block storage volumes to your applications to provide seamless integration between your IT environment and the Amazon Web Services (AWS) storage infrastructure for your data protection, recovery, and migration needs.

@@ -69,3 +69,21 @@ With EBS Elastic Volumes, you can make changes as needed to optimize your EBS vo
 * What is the application's latency sensitivity? If it is very low and sub-millisecond to single-digit millisecond latency is needed, io2 Provisioned IOPS could be required. If single-digit to low two-digit latency is tolerable, gp3 General Purpose SSD could be the correct choice. If your workload is not latency sensitive, HDD volume types could be the most cost effective choice.
 
 * Do you prefer to optimize for price or performance? When comparing the EBS volume types, multiple volumes types could satisfy the requirements. Compare the EBS volume configurations required. Which configuration is more cost-effective? Does a configuration offer additional desirable performance characteristics? Is there a trade-off and what is the value to your workload?
+
+## AWS Compute Optimizer for EBS volumes
+
+Once your EBS volumes are in operation, you can monitor them and verify that your volumes are providing optimal performance and cost effectiveness using AWS Compute Optimizer.
+
+Compute Optimizer is a service that analyzes the configuration and utilization metrics of your AWS resources. It reports if your resources are optimized and generates optimization recommendations to reduce the cost and improve the performance of your workloads. 
+
+Compute Optimizer also provides graphs showing recent utilization metric data and projected utilization for recommendations. You can use this information to evaluate which recommendation provides the best price-performance trade-off. 
+
+The analysis and visualization of your usage patterns can help you decide when to move or resize your running resources and still meet your performance and capacity requirements.
+
+Compute Optimizer generates recommendations for EC2 instances, Amazon EC2 Auto Scaling groups, EBS volumes, and Lambda functions.
+
+For Compute Optimizer to generate recommendations for these resources, they must meet a specific set of requirements and must have accumulated sufficient metric data.
+
+You must opt-in to have Compute Optimizer analyze your AWS resources. The service supports standalone AWS accounts, member accounts of an organization, and the management account of an organization.
+
+After you opt-in, Compute Optimizer begins analyzing the specifications and the utilization metrics of your resources from CloudWatch. The Compute Optimizer dashboard displays the optimization findings for your resources. 

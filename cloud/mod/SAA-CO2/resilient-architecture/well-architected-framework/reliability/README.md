@@ -1,8 +1,20 @@
 # III. Reliability Pillar
 
-> Ability to recover from infrastructure or service disruptions, acquiring resources to meet demand and mitigating disruptions.
+> Ability to recover from infrastructure or service disruptions, dynamically acquiring computing resources to meet demand, and mitigating disruptions such as misconfigurations.
 
 The Reliability pillar encompasses the ability of a workload to perform its intended function correctly and consistently when it's expected to. This includes the ability to operate and test the workload through its total lifecycle.
+
+> ### Reliability design principles
+>
+> ✓ Automatically recover from failure.
+>
+> ✓ Test recovery procedures.
+>
+> ✓ Scale horizontally to increase aggregate workload availability.
+>
+> ✓ Stop guessing capacity.
+>
+> ✓ Manage change in automation.
 
 > **High Availability, Fault Tolerance, and Disaster Recovery**
 >
@@ -37,6 +49,10 @@ If we're designing for *Fault Tolerance*, we would have two active servers servi
 Slightly different from *Fault Tolerance* and *High Availability* since *Fault Tolerance* and *High Availability* focus on designing systems to operate through a disaster, *Disaster Recovery* is all about what we need to plan for and also what we need to do in the event of a disaster. Having a disaster recovery plan is crucial b/c the worst time to recover from a disaster is in the middle of that disaster. *Disaster Recovery* requires pre-planning and it also needs steps to complete the *Disaster Recovery* process so that when that Disaster occurs, you are already set w/ a plan to recover your systems as quickly as possible. Maybe you have an onsite backup to switch your environment to. Maybe use AWS as your backup site and have a CloudFormation template ready to go to provision your environment inside AWS after the disaster. It's essential to have backups of your environment stored offsite in the cloud, but definitely not stored in the same building as your systems, b/c if that building is damaged, then so are your backups. So you need to have a plan to protect your data and stor backups elsewhere.
 
 It is best practice to run *Disaster Recovery* exercises to practice this process so that in a real disaster, the process goes smoothly. We have to protect our systems.
+
+> [!NOTE]
+>
+> See **AWS Fault Injection Simulator** in combination w/ **CloudWatch** to simulate failures.
 
 ## Design Principles
 

@@ -2,15 +2,15 @@
 
 > * A framework for ensuring infrastructures are:
 >
->   ✓ Secure
+>   ✓ Operational excellence
 >
->   ✓ High-performing
+>   ✓ Security
 >
->   ✓ Resilient
+>   ✓ Reliability
 >
->   ✓ Efficient
+>   ✓ Performance efficiency
 >
->   ✓ Sustainable
+>   ✓ Cost optimization
 
 > The AWS Well-Architected Framework is AWS's best practices and core strategies for architecting systems in the cloud, helping you design, build, and operate reliable, secure, efficient, and cost-effective systems.
 

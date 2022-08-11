@@ -1,5 +1,7 @@
 # Auto Scaling
 
+![Fig. 1 AWS Auto Scaling](../../../../img/SAA-CO2/high-availability-architecture/auto-scaling-group/diag01.png)
+
 > * Automatically adjusts resource capacity.
 >
 > * Define where Amazon EC2 Auto Scaling deploys resources.
@@ -31,6 +33,18 @@
 > * Scale based on demand
 >
 > * Use predictive scaling
+
+## Unified Scaling
+
+![Fig. 2 Unified Scaling](../../../../img/SAA-CO2/high-availability-architecture/auto-scaling-group/diag02.png)
+
+## Automatic Resource Discovery
+
+* AWS Auto Scaling automatically scans all resources used by your application.
+
+* Discovers and lists which resources are scalable.
+
+* No need to manually identify resources through individual interfaces.
 
 ## Different Scaling Options
 
@@ -66,6 +80,24 @@
 >
 > AWS Auto Scaling can help you maintain optimal availability and performance by combining predictive scaling and dynamic scaling (proactive and reactive approaches, respectively) to scale your Amazon EC2 capacity faster.
 
+## Build-in Scaling Strategies
+
+✓ Optimize for Availability ▶︎ Low resource utilization target
+
+✓ Balance Availability and Cost ▶︎ Moderate resource utilization target
+
+✓ Optimize for Cost ▶︎ High resource utilization target
+
+## Considerations
+
+When should you consider using AWS Auto Scaling?
+
+* If you have applications that use one or more scalable resources, and have a variable load
+
+* If you want more guidance on defining your application scaling plan
+
+* If you want to maintain the health of your EC2 fleet, scale individual resources separately, create scheduled scaling actions, or setup step-scaling policies, you can use Amazon EC2 auto-scaling or application auto-scaling
+
 ## Learning summary
 
 > **What are my scaling options?**
@@ -79,3 +111,13 @@
 > * Scale based on demand
 >
 > * Use predictive scaling
+
+## Key Takeaways
+
+✓ Monitor your applications continually and automatically adjust capacity.
+
+✓ Set up scaling efficiently through automatic resource discovery via a single unified interface.
+
+✓ Make smart decisions regarding application high availability w/ build-in scaling strategies and predictable scaling.
+
+✓ Maintain application performance automatically w/ smart scaling policies.

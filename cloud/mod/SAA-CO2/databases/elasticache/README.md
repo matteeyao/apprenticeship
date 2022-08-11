@@ -4,9 +4,9 @@
 >
 > 2. **Supports two popular caching engines**:
 >
->   * Redis
+>   * **Redis**
 >
->   * Memcached
+>   * **Memcached**
 >
 > 3. Great for **offloading reads** by caching our response to improve our application speed and reduce application's cost and **storing session state**. So it allows for stateless compute instances, used for fault-tolerant architectures.
 
@@ -16,11 +16,11 @@ Elasticache can be used to improve performance by improving the read scalability
 
 * Helps take off some of the performance impact b/c you're not constantly querying w/ your main production database for the same queries. So you're going to cache your most-queried information in Elasticache.
 
-> ElastiCache supports two open-source in-memory caching engines:
+> **ElastiCache** supports two open-source in-memory caching engines:
 >
-> * Memcached
+> * **Memcached**
 >
-> * Redis
+> * **Redis**
 
 |                                                  | **Memcached** | **Redis** |
 |--------------------------------------------------|---------------|-----------|
@@ -36,6 +36,14 @@ Elasticache can be used to improve performance by improving the read scalability
 | Pub/Sub                                          | -             | Yes       |
 | Lua scripting                                    | -             | Yes       |
 | Geospatial support                               | -             | Yes       |
+
+## Use case - Media streaming: Amazon ElastiCache
+
+Amazon ElastiCache offers a fast, in-memory data store to power live streaming use cases. ElastiCache can store metadata for user profiles and viewing history, authentication information/tokens for millions of users, and manifest files to enable content delivery networks to stream videos to millions of mobile and desktop users at a time.
+
+In this use case, Amazon Simple Storage Service (Amazon S3) and Amazon CloudFront are managing and serving media content. ElastiCache manages the content index and token authentication for in-memory, sub-milliseconds responses at scale.
+
+![Fig. 1 Media streaming: Amazon ElastiCache](../../../../img/SAA-CO2/databases/elasticache/diag01.png)
 
 ## Learning summary
 
