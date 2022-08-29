@@ -1,0 +1,5 @@
+# What is AWS Storage Gateway?
+
+AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage. Customers use Storage Gateway to simplify storage management and reduce costs for key hybrid cloud storage use cases. These include moving backups to the cloud, using on-premises file shares backed by cloud storage, and providing low latency access to data in AWS for on-premises applications.
+
+As part of the AWS Storage Gateway service you can configure a Volume Gateway to present cloud-based iSCSI block storage volumes to your on-premises applications. The Volume Gateway stores and manages on-premises data in Amazon S3 on your behalf and operates in either cache mode or stored mode. In either mode, you can take point-in-time copies of your volumes using AWS Backup, which are stored in AWS as Amazon EBS snapshots. Using Amazon EBS Snapshots enables you to make space-efficient versioned copies of your volumes for data protection, recovery, migration, and various other copy data needs.
