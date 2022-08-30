@@ -52,7 +52,7 @@ Which of the following is the MOST suitable solution that the Architect should i
 
 [ ] Create a new Amazon SNS topic and Amazon MQ. Add an S3 event notification configuration on the bucket to publish `s3:ObjectAdded:*` and `s3:ObjectRemoved` event types to SQS and SNS.
 
-[x] Create a new Amazon SNS topic and Amazon SQS queue. Add an event notification configuration on the bucket to publish `s3:ObjectCreated:*` and `s3:ObjectRemoved:Delete` event types to SQS and SNS.
+[ ] Create a new Amazon SNS topic and Amazon SQS queue. Add an event notification configuration on the bucket to publish `s3:ObjectCreated:*` and `s3:ObjectRemoved:Delete` event types to SQS and SNS.
 
 **Explanation**: The **Amazon S3** notification feature enables you to receive notifications when certain events happen in your bucket. To enable notifications, you must first add a notification configuration that identifies the events you want Amazon S3 to publish and the destinations where you want Amazon S3 to send the notifications. You store this configuration in the *notification* sub-resource that is associated with a bucket. Amazon S3 provides an API for you to manage this sub-resource.
 

@@ -1,6 +1,5 @@
 # Private, Public, and Elastic IPs
 
-
 1. Part of your design requirements for a new EC2-based application is the need to be able to move the IPv4 address from the new EC2 instance to another instance in the same region if needed. Which of the following configurations will allow you to accomplish this goal w/ the least effort?
 
 [ ] Move the default ENI to another instance to move the address

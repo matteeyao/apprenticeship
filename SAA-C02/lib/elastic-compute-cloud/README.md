@@ -56,7 +56,7 @@ Hence, the correct answers are:
 
 * All data on the attached instance-store devices will be lost.
 
-> The option that says: **The ENI (Elastic Network Interface) is detached is incorrect because the ENI will stay attached even if you stopped your EC2 instance**.
+> The option that says: **The ENI (Elastic Network Interface) is detached** is incorrect because the ENI will stay attached even if you stopped your EC2 instance.
 
 > The option that says: **The Elastic IP address is disassociated with the instance** is incorrect because the EIP will actually remain associated with your instance even after stopping it.
 

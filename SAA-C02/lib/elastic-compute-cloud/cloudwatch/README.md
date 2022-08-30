@@ -74,7 +74,7 @@ What are the enhanced monitoring metrics that Amazon CloudWatch gathers from Ama
 
 [ ] Database Connections
 
-[ ] RDS  child processes.
+[ ] RDS child processes.
 
 [ ] OS processes
 

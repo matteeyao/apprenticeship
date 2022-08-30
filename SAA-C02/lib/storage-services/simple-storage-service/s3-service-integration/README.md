@@ -91,5 +91,3 @@ Hence, the correct answer is: **Use AWS Config to set up a rule in your AWS acco
 > The option that says: **Use AWS CloudTrail and review the event history of your AWS account** is incorrect. Although it can track changes and store a history of what happened to your resources, this service still cannot enforce rules to comply with your organization's policies.
 
 <br />
-
-4. 
