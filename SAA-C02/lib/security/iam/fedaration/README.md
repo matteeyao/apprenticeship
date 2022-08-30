@@ -1,4 +1,4 @@
-# Identity Providers and Fedaration
+# Identity Providers and Federation
 
 1. A tech company that you are working for has undertaken a Total Cost Of Ownership (TCO) analysis evaluating the use of Amazon S3 versus acquiring more storage hardware. The result was that all 1200 employees would be granted access to use Amazon S3 for the storage of their personal documents.
 
