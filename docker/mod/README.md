@@ -2,11 +2,13 @@
 
 Containers allow a developer to package up and application w/ all of the parts it needs, such as libraries and other dependencies, and ship it all out in one pretty package
 
-Meaning, it's **not** about what is inside your app to a large extent
+Meaning, it's **not** about what is inside your app to a large extent. It's about packaging, shipping, and delivering your app in a standard way. Simplify development, testing, deployment, and operation of your software w/ the use of Docker.
 
-It's about packaging, shipping, and delivering your app in a standard way
+**Docker** is primarily a **container runtime**.
 
-Simplify development, testing, deployment, and operation of your software w/ the use of Docker
+This means that Docker is a piece of software that is designed to implement and support containers.
+
+At its core, Docker allows you to run containers on systems. It also offers a variety of tools for creating and managing **containers** and **container images**.
 
 ## Docker Containers
 
