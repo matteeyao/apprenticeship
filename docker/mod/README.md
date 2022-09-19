@@ -10,6 +10,22 @@ This means that Docker is a piece of software that is designed to implement and 
 
 At its core, Docker allows you to run containers on systems. It also offers a variety of tools for creating and managing **containers** and **container images**.
 
+## Docker functionalities
+
+* **Portable Deployment Across Machine** ▶︎ Docker allows for the bundling of an application, and all its dependencies into a single object called a container.
+
+* **Application-Centric** ▶︎ Docker is optimized for deployment of applications instead of machines.
+
+* **Automatic Build** ▶︎ Docker allows for automatic assembly of containers from source code, w/ full control over dependencies. Developers are free to use chef, puppet, salt or any combination automation tools.
+
+* **Versioning** ▶︎ Docker includes git like capabilities that allow for tracking version of containers, inspecting their differences and committing new versions. The ability to see the history of a container is also included.
+
+* **Component Re-use** ▶︎ Any container can be used to create a new image that is more specialized for our needs.
+
+* **Sharing Images** ▶︎ The Docker Hub makes it possible to share images and has been open-sourced so anyone can deploy their own private or public registry.
+
+* **Tool Ecosystem** ▶︎ Docker defines an API for automating and customizing of containers. Docker can be integrated w/ tools such as Salt, Mesos, OpenStack Nova, OpenStack horizon and Jenkins.
+
 ## Docker Containers
 
 * A container is a standard unit of software that packages up code and all its dependencies so the application runs quickly and reliably from one computing environment to another. A Docker container image is a lightweight, standalone, executable package of software that includes everything needed to run an application: code, runtime, system tools, system libraries, and settings.
@@ -45,3 +61,4 @@ Docker Machine is a tool that lets you install a Docker Engine on virtual hosts,
 ## Docker Swarm
 
 Docker Swarm is an orchestration tool used to manage a cluster of docker hosts. While `docker-compose` manages multiple Docker containers within one docker host, `docker swarm` manages multiple docker hosts managing multiple Docker containers. Swarm mode is built into the docker engine and is managed through the Docker client. Swarm is still relatively new and still lacks some fundamental features that would make it useful for orchestration in production. Instead, **Kubernetes** is currently one of the most popular tools for orchestration in production
+
