@@ -1,5 +1,33 @@
 # Docker Swarm
 
+## Introduction to Docker Swarm
+
+Docker includes a feature called `swarm mode`, which allows you to build a distributed cluster of docker machines to run your containers.
+
+Docker swarm provides many useful features, and can help facilitate orchestration, high-availability , and scaling
+
+* **Docker Swarm**: A cluster management solution that comes packaged with Docker. It allows us to create and manage a cluster of Docker servers.
+
+* **Manager**: A server in a Swarm that controls the swarm cluster and delegates work to workers.
+
+* **Worker**: A server in the Swarm that executes container workloads.
+
+## Let's build a swarm
+
+**1 Manager**
+
+* Image: Ubuntu 18.04 Bionic Beaver LTS
+
+* Size: Medium
+
+**2 Workers**
+
+* Image: Ubuntu 18.04 Bionic Beaver LTS
+
+* Size: Small
+
+## Benefits of Docker Swarm
+
 * **Cluster management integrated w/ Docker Engine** ▶︎ Docker CLI allows you to create a swarm of Docker Engines where you can deploy your application. No additional software needed.
 
 * **Decentralized design** ▶︎ Docker Engine handles specialization at runtime, allowing you to deploy an entire swarm from a single disk image.

@@ -1,5 +1,4 @@
-
-### Perform a clean restart of a Docker instance:
+# Perform a clean restart of a Docker instance:
 
 1. Stop the container(s) using the following command:
 
