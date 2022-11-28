@@ -10,6 +10,19 @@ This means that Docker is a piece of software that is designed to implement and 
 
 At its core, Docker allows you to run containers on systems. It also offers a variety of tools for creating and managing **containers** and **container images**.
 
+## Introducing containers, images, and registries
+
+Docker is a platform for packaging, distributing and running applications. As mentioned earlier, it allows you to package your application along w/ its entire environment.This can be just a few dynamically linked libraries required by the app, or all the files that are usually shipped w/ an operating system. Docker allows you to distribute this package via a public repository to any other Docker-enabled computer.
+
+![Fig. 1 The three main Docker concepts are image, registries and containers](../img/diag01.png)
+
+
+* _Images_ ▶︎ A container image is something you package your application and its environment into. Like a zip file or a tarball. It contains the whole filesystem that the application will use and additional metadata, such as the path to the executable file to run when the image is executed, the ports the application listens on, and other information about the image.
+
+* _Registries_ ▶︎ A registry is a repository of container images that enables the exchange of images between different people and computers. After you build your image, you can either run it on the same computer, or _push_ (upload) the image to a registry and then _pull_ (download) it to another computer. Certain registries are public, allowing anyone to pull images from it, while others are private and only accessible to individuals, organizations or computers that have the required authentication credentials.
+
+* _Containers_ ▶︎ A container is instantiated from a container image. A running container is a normal process running in the host operating system, but its environment is isolated from that of the host and the environments of other processes. The file system of the container originates from the container image, but additional file systems can also be mounted into the container. A container is usually resource-restricted, meaning it can only access and use the amount of resources such as CPU and memory that have been allocated to it.
+
 ## Docker functionalities
 
 * **Portable Deployment Across Machine** ▶︎ Docker allows for the bundling of an application, and all its dependencies into a single object called a container.

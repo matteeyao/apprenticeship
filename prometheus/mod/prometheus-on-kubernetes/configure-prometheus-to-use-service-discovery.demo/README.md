@@ -6,7 +6,7 @@ Recently, your team has deployed Prometheus to the companies Kubernetes cluster.
 
 Find Service Discovery to find the various service you want to implement, cAdvisor, and the Kubernetes API.
 
-![Fig. 1 Lab Diagram](../../../img/prometheus-on-kubernetes/configuring-prometheus-to-use-service-discovery.demo/diag01.png)
+![Fig. 1 Lab Diagram](../../../img/prometheus-on-kubernetes/configure-prometheus-to-use-service-discovery.demo/diag01.png)
 
 ## Learning objectives
 

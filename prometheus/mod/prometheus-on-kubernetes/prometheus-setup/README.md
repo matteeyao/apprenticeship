@@ -1,5 +1,7 @@
 # Setting-up Prometheus
 
+![Fig. 1 Kubernetes/Prometheus Environment](../../../img/prometheus-on-kubernetes/prometheus-setup/diag01.png)
+
 Setting-up Prometheus comprises two components:
 
 * The Prometheus pod
@@ -20,6 +22,10 @@ git clone https://github.com/linuxacademy/content-kubernetes-prometheus-env.git
 
 ```zsh
 cd content-kubernetes-prometheus-env/
+
+ls
+# → alertmanager  grafana   prometheus  redis
+
 cd prometheus/
 ```
 
@@ -27,6 +33,21 @@ cd prometheus/
 
 ```zsh
 vi namespaces.yml
+```
+
+`namespaces.yml` will create a new namespace named monitoring
+
+```yaml
+{
+  "kind": "Namespace",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "monitoring",
+    "labels": {
+        "name": "monitoring"
+    }
+  }
+}
 ```
 
 Namespaces are virtual clusters that live on the same physical cluster.
@@ -37,7 +58,7 @@ Namespaces are virtual clusters that live on the same physical cluster.
 kubectl apply -f namespaces.yml
 ```
 
-4. Build out Prometheus environment:
+4. With namespaces set up, build out Prometheus environment.
 
 First, set up a configuration map:
 
@@ -108,6 +129,43 @@ kubectl describe configmaps -n monitoring
 vi prometheus-deployment.yml
 ```
 
+```yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: prometheus-deployment
+  namespace: monitoring
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: prometheus-server
+    spec:
+      containers:
+        - name: prometheus
+          image: prom/prometheus:v2.2.1
+          args:
+            - "--config.file=/etc/prometheus/prometheus.yml"
+            - "--storage.tsdb.path=/prometheus/"
+          ports:
+            - containerPort: 9090
+          volumeMounts:
+            - name: prometheus-config-volume
+              mountPath: /etc/prometheus
+            - name: prometheus-storage-volume
+              mountPath: /prometheus/
+        - name: watch
+          image: weaveworks/watch:master-5b2a6e5
+          imagePullPolicy: IfNotPresent
+          args: ["-v", "-t", "-p=/etc/prometheus", "-p=/var/prometheus", "curl", "-X", "POST", "--fail", "-o", "-", "-sS", "http://localhost:9090/-/reload"]
+          volumeMounts:
+            - name: prometheus-config-volume
+...
+```
+
+Note we are using volumes that will be destroyed if pods are redeployed. So these are ephemeral volumes.
+
 ```zsh
 kubectl apply -f prometheus-deployment.yml
 ```
@@ -146,6 +204,8 @@ kubectl apply -f prometheus-service.yml
 ```zsh
 kubectl get services -n monitoring
 ```
+
+We don't have a role supplied yet, which means targets will be down, so let's apply `clusterRole.yml`:
 
 ```zsh
 kubectl apply -f clusterRole.yml
