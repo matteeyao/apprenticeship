@@ -100,3 +100,74 @@ docker container start <CONTAINER_NAME | ID>
 ```
 docker container rm <container name or ID>
 ```
+
+## 2.2.3 Running the container
+
+With the image built and ready, you can now run the container with the following command:
+
+```zsh
+$ docker run --name kiada-container -p 1234:8080 -d kiada
+9d62e8a9c37e056a82bb1efad57789e947df58669f94adc2006c087a03c54e02
+```
+
+This tells Docker to run a new container called `kiada-container` from the `kiada` image. The container is detached from the console (`-d` flag) and runs in the background. Port `1234` on the host computer is mapped to port `8080` in the container (specified by the `-p 1234:8080` option), so you can access the app at http://localhost:1234.
+
+The following figure should help you visualize how everything fits together. Note that the Linux VM exists only if you use macOS or Windows. If you use Linux directly, there is no VM and the box depicting port `1234` is at the edge of the local computer.
+
+![Fig. 2 Visualizing your running container](../../../../kubernetes/img/kubernetes-in-action.demo/chapter02/diag02.png)
+
+### Accessing your app
+
+Now access the application at http://localhost:1234 using `curl` or your internet browser:
+
+```zsh
+$ curl localhost:1234
+Kiada version 0.1. Request processed by "44d76963e8e1". Client IP: ::ffff:172.17.0.1
+```
+
+> [!NOTE]
+>
+> If the Docker Daemon runs on a different machine, you must replace `localhost` with the IP of that machine. You can look it up in the `DOCKER_HOST` environment variable.
+
+If all went well, you should see the response sent by the application. In my case, it returns `44d76963e8e1` as its hostname. In your case, you’ll see a different hexadecimal number. That’s the ID of the container. You’ll also see it displayed when you list the running containers next.
+
+### Listing all running containers
+
+To list all the containers that are running on your computer, run the following command. Its output has been edited to make it more readable—the last two lines of the output are the continuation of the first two.
+
+```zsh
+$ docker ps 
+CONTAINER ID    IMAGE           COMMAND         CREATED         ...
+44d76963e8e1    kiada:latest    "node app.js"   6 minutes ago   ...
+
+... STATUS          PORTS                     NAMES
+... Up 6 minutes    0.0.0.0:1234->8080/tcp    kiada-container
+```
+
+For each container, Docker prints its ID and name, the image it uses, and the command it executes. It also shows when the container was created, what status it has, and which host ports are mapped to the container.
+
+### Getting additional information about a container
+
+The `docker ps` command shows the most basic information about the containers. To see additional information, you can use `docker inspect`:
+
+```zsh
+$ docker inspect kiada-container
+```
+
+Docker prints a long JSON-formatted document containing a lot of information about the container, such as its state, config, and network settings, including its IP address.
+
+### Inspecting the application log
+
+Docker captures and stores everything the application writes to the standard output and error streams. This is typically the place where applications write their logs. You can use the `docker logs` command to see the output:
+
+```zsh
+$ docker logs kiada-container
+Kiada - Kubernetes in Action Demo Application
+---------------------------------------------
+Kiada 0.1 starting...
+Local hostname is 44d76963e8e1
+Listening on port 8080
+Received request for / from ::ffff:172.17.0.1
+```
+
+You now know the basic commands for executing and inspecting an application in a container. Next, you’ll learn how to distribute it.
