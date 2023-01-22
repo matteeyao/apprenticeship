@@ -1,5 +1,3 @@
-#
-
 ## 1.2.1 Understanding how Kubernetes transforms a computer cluster
 
 It frees application developers from the need to implement infrastructure-related mechanisms in their applications; instead, they rely on Kubernetes to provide them. This includes things like:

@@ -114,7 +114,7 @@ This tells Docker to run a new container called `kiada-container` from the `kiad
 
 The following figure should help you visualize how everything fits together. Note that the Linux VM exists only if you use macOS or Windows. If you use Linux directly, there is no VM and the box depicting port `1234` is at the edge of the local computer.
 
-![Fig. 2 Visualizing your running container](../../../../kubernetes/img/kubernetes-in-action.demo/chapter02/diag02.png)
+![Fig. 2 Visualizing your running container](../../../../kubernetes/img/kubernetes-in-action.demo/chpt02/diag02.png)
 
 ### Accessing your app
 

@@ -31,3 +31,11 @@ Used when transitioning from Docker Compose to Kubernetes.
 ## Kustomize
 
 **Kustomize** is a configuration management tool for managing Kubernetes object configurations. It allows you to share and re-use templated configurations for Kubernetes applications.
+
+## 3.1.6 Deploying a multi-node cluster from scratch
+
+* You can start w/ the instructions in Appendix B, which explain how to create VMs w/ VirtualBox and install K8s using the kubeadm tool
+
+    * Tou can also use those instructions to install K8s on your bare-metal machines or in VMs running in the cloud
+
+* Once you've successfully deployed one or two clusters using kubeadm, you can then try to deploy it completely manually, by following Kelsey Hightower's _Kubernetes the Hard Way_ tutorial at github.com/kelseyhightower/Kubernetes-the-hard-way

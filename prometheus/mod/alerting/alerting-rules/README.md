@@ -1,4 +1,4 @@
-# Alerting Rules
+ # Alerting Rules
 
 Previously, we discussed AlertManager. In this module, we're going to stand up a Redis pod to resolve this alert.
 

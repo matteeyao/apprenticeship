@@ -16,21 +16,21 @@ The code archive is organized per chapter. You'll find a description of the file
 
 1\) Introducing Kubernetes (no code files)
 
-2\) [Understanding containers](chapter02/)
+2\) [Understanding containers](chpt02/)
 
-3\) [Deploying your first application](Chapter03/)
+3\) [Deploying your first application](chpt03/)
 
 ### Part II: Learning the ropes: _Kubernetes API objects_
 
 4\) Introducing Kubernetes API objects (no code files)
 
-5\) [Running workloads in Pods](Chapter05/)
+5\) [Running workloads in Pods](chpt05/)
 
-6\) [Managing the Pod lifecycle](Chapter06/)
+6\) [Managing the Pod lifecycle](chpt06/)
 
-7\) [Attaching storage volumes to Pods](Chapter07/)
+7\) [Attaching storage volumes to Pods](chpt07/)
 
-8\) [Persisting data in PersistentVolumes](Chapter08/)
+8\) [Persisting data in PersistentVolumes](chpt08/)
 
 9\) [Configuration via ConfigMaps, Secrets, and the Downward API](Chapter09/)
 
