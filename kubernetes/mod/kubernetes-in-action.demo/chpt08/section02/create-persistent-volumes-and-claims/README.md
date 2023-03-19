@@ -30,3 +30,7 @@
 ## Using a claim and volume in multiple pod
 
 ▶︎ See [8.2.4](use-claim-and-volume-in-multiple-pods/README.md)
+
+## Understanding the lifecycle of manually provisioned persistent volumes
+
+▶︎ See [8.2.4](persistent-volumes-lifecycle/README.md)

@@ -51,7 +51,7 @@ docker build -t custom-nginx .
 Run container:
 
 ```
-dockr run -d -p 8080:80 custom=nginx
+docker run -d -p 8080:80 custom=nginx
 ```
 
 ```

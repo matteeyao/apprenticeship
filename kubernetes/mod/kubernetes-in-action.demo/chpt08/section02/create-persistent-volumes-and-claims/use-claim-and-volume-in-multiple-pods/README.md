@@ -250,4 +250,119 @@ other-data  Bound     other-data  10Gi      RWO,ROX                         23h
 
   * This prevents other nodes from attaching the volume, even in read-only mode
 
-  *
+* Wonder what happens if you delete all the writer pods?
+  
+  * Does that allow the second node to attach the volume in read-only mode and run its pods?
+
+  * Delete the writer pods one by one or use the following command to delete them all if you use a shell that supports the following syntax:
+
+```zsh
+$ kubectl delete $(kubectl get po -o name | grep writer)
+```
+
+* Now list the pods again
+
+  * The status of the reader pods that are on the second node is still ContainerCreating
+
+  * Even if you give it enough time, the pods on that node never run
+
+  * Can you figure out why that is so?
+
+* It's b/c the volume is still being used by the reader pods on the first node
+
+  * The volume is attached in read-write mode b/c that was the mode requested by the writer pods, which you deployed first
+
+  * Kubernetes can't detach the volume or change the mode in which it is attached while it's being used by pods
+
+* In the next section, you'll see what happens if you deploy reader pods w/o first deploying the writers
+
+  * Before moving on, delete all the pods as follows:
+
+```zsh
+$ kubectl delete po --all
+```
+
+* Give K8s come time to detach the volume from the node
+
+  * Then go to the next exercise
+
+## Using a ReadOnlyMany volume in multiple pods
+
+* Create several reader pods again by repeating the `kubectl create -f pod.data-reader.yaml` command several times
+
+  * This time, all the pods run, even if they are on different nodes:
+
+```zsh
+$ kubectl get pods -o wide
+NAME                READY   STATUS    RESTARTS  AGE   IP          NODE
+data-reader-9xs5q   1/1     Running   0         27s   10.0.10.34  gkdp-r6j4
+data-reader-b9b25   1/1     Running   0         29s   10.0.10.32  gkdp-r6j4
+data-reader-cbnp2   1/1     Running   0         16s   10.0.9.12   gkdp-mcbg
+data-reader-fjx6t   1/1     Running   0         21s   10.0.9.11   gkdp-mcbg
+```
+
+* All these pods specify the `readOnly: true` field in the `persistentVolumeClaim` volume definition
+
+  * This causes the node that runs the first pod to attach the persistent volume in read-only mode
+
+  * The same thing happens on the second node
+
+  * They can both attach the volume b/c they both attach it in read-only mode and the persistent volume supports ReadOnlyMany
+
+* The ReadOnlyMany access mode doesn't need further explanation
+
+  * If no pod mounts the volume in read-write mode, any number of pods can use the volume, even on many different nodes
+
+* Can you guess what happens if you deploy a writer pod now?
+
+  * Can it write to the volume?
+
+  * Create the pod and check the status
+
+  * This is what you'll see:
+
+```zsh
+$ kubectl get po -o wide
+NAME                READY   STATUS    RESTARTS  AGE     IP            NODE
+...
+data-writer-dj6w5   1/1     Running   0         3m33s   10.0.10.38    gkdp-r6j4
+```
+
+* This pod is shown as `Running`
+
+  * Does that surprise you? It did surprise us
+
+  * I thought it would be stuck in `ContainerCreating` b/c the node couldn't mount the volume in read-write mode b/c it's already mounted in read-only mode
+
+  * Does that mean that the node was able to upgrad the mount point from read-only to read-write w/o detaching the volume?
+
+* Let's check the pod's log to confirm that it could write to the volume:
+
+```zsh
+$ kubectl logs data-writer-dj6w5
+sh: can't create /other-data/data-writer-dj6w5: Read-only file system
+```
+
+* Ahh, there's your answer
+
+  * The pod is unable to write to the volume b/c it's read-only
+
+  * The pod was started even though the volume isn't mounted in read-write mode as the pod requests
+
+  * This might be a bug
+
+  * If you try this yourself and the pod doesn't run, you'll know that the bug was fixed after the book was published
+
+* You can now delete all the pods, the persistent volume claim, and the underlying GCE Persistent Disk, as you're done using them
+
+## Using a ReadWriteMany volume in multiple pods
+
+* GCE Persistent Disks don't support the ReadWriteMany access mode
+
+  * However, network-attached volumes available in other cloud environments do support it
+
+  * As the name of the ReadWriteMany access mode indicates, volumes that support this mode can be attached to many cluster nodes concurrently, yet still allow both read and write operations to be performed on the volume
+
+* As this mode has no restrictions on the number of nodes or pods that can use the persistent volume in either read-write or read-only mode, it doesn't need any further explanation
+
+  * If you'd like to play w/ them anyhow, I suggest you deploy the writer and the reader pods as in the previous exercise, but this time use the ReadWriteMany access mode in both the persistent volume and the persistent volume claim definitions

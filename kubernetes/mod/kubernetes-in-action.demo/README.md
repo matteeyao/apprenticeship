@@ -32,21 +32,21 @@ The code archive is organized per chapter. You'll find a description of the file
 
 8\) [Persisting data in PersistentVolumes](chpt08/)
 
-9\) [Configuration via ConfigMaps, Secrets, and the Downward API](Chapter09/)
+9\) [Configuration via ConfigMaps, Secrets, and the Downward API](chpt09/)
 
-10\) [Organizing objects using Namespaces and Labels](Chapter10/)
+10\) [Organizing objects using Namespaces and Labels](chpt10/)
 
-11\) [Exposing Pods with Services](Chapter11/)
+11\) [Exposing Pods with Services](chpt11/)
 
-12\) [Exposing services with Ingress](Chapter12/)
+12\) [Exposing services with Ingress](chpt12/)
 
-13\) [Replicating Pods with ReplicaSets](Chapter13/)
+13\) [Replicating Pods with ReplicaSets](chpt13/)
 
-14\) [Managing Pods with Deployments](Chapter14/)
+14\) [Managing Pods with Deployments](chpt14/)
 
-15\) [Deploying stateful workloads with StatefulSets](Chapter15/)
+15\) [Deploying stateful workloads with StatefulSets](chpt15/)
 
-16\) [Deploying node agents and daemons with DaemonSets](Chapter16/)
+16\) [Deploying node agents and daemons with DaemonSets](chpt16/)
 
 ## Contributing
 
