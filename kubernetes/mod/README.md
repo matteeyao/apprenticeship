@@ -1,3 +1,30 @@
+# Kubernetes
+
+## Commands
+
+```zsh
+kubectl explain <KIND>    # ← View documentation, such as which apiVersion to use for the k8s object kind
+```
+
+## Bash aliases
+
+```zsh
+export ns=default
+alias k='kubectl -n $ns' # ← this helps when the namespace in question doesn't have a friendly name 
+alias kdr= 'kubectl -n $ns -o yaml --dry-run'.  # ← run commands in dry run mode and generate yaml
+```
+
+## VIM settings
+
+* `vim ~/.vimrc`:
+
+```txt
+set nu
+set expandtab
+set shiftwidth=2
+set tabstop=2
+```
+
 ## 1.2.1 Understanding how Kubernetes transforms a computer cluster
 
 It frees application developers from the need to implement infrastructure-related mechanisms in their applications; instead, they rely on Kubernetes to provide them. This includes things like:
